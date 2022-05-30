@@ -1,9 +1,6 @@
-#include <list>
+#include <cmath>
 
 #define countof(n)     (sizeof(n)/sizeof(n[0]))
-
-typedef std::list<int> NUM_LIST;
-typedef NUM_LIST::iterator	NUM_LIST_IT;
 
 const int cnPrimeCount[] = { 0, 0, 1, 2, 2, 3 };
 
@@ -15,7 +12,8 @@ class Solution
 public:
 	int countPrimes(int n)
 	{
-		int Cp, M, P, cNums, k, kMax, phi, r, nSqrt;
+		int Cp, M, P, cNums, k, kMax, phi, r, nSqrt, coprimes_count;
+		int* coprimes;
 
 		// Decrementing M, so we will count primes up to N including N itself
 		if (n > 0) n -= 1;
@@ -34,9 +32,8 @@ public:
 		nSqrt = int(sqrt(n)) + 1;
 		M = 2 * 3;			// Initial modulus equals to 2 * 3 because we start 2's and 3's excluded
 		phi = 2;			// Euler's function (totient) of M, i.e. Phi(M)
-		NUM_LIST* coprimes = new NUM_LIST();
-		coprimes->push_back(1);		coprimes->push_back(5);		// Adding numbers co-prime to modulus M
-
+		coprimes = new int[2];
+		coprimes[0] = 1;	coprimes[1] = 5;		// Adding numbers co-prime to modulus M
 		P = 5;		// Our next prime Pj will always be the second number in co - primes list
 
 		// Initial count of all prime candidates. *2 means 2 co-primes (1 and 5) per each M numbers
@@ -53,9 +50,9 @@ public:
 			cNums = (kMax / M) * phi;  // At first, we count all full inclusions of co-primes list
 			k = kMax % M;  // Then, we take care of the remainder, to count co-primes element-wise
 		
-			for (NUM_LIST_IT it = coprimes->begin(); it != coprimes->end(); ++it)
+			for (int i = 0; i < phi; ++i)
 			{
-				if (*it <= k) cNums++;
+				if (coprimes[i] <= k) cNums++;
 				else break;
 			}
 
@@ -67,91 +64,88 @@ public:
 			if (kMax / M == 0)
 			{
 				// If there are more than 2 elements in co-primes list, we go to reduce stage of algorythm
-				if (coprimes->size() > 2)
-				{
-					_reduceCoprimesList(&coprimes, n);
-					if (coprimes->size() > 1) P = *(++coprimes->begin());
-					else P = nSqrt;	// Skip reduce part of algorythm (P * P will always be greater than N)
-				}
-				else
-				{
-					P = nSqrt;  // Skip reduce part of algorythm (P * P will always be greater than N)
-				}
+				coprimes_count = phi;
+				_reduceCoprimesList(&coprimes, coprimes_count, n);
+				if (coprimes_count > 1) P = coprimes[1];
+				else P = nSqrt;	// Skip reduce part of algorythm (P * P will always be greater than N)
 
 				break;
 			}
 		
 			// Well done for this step, preparing for next one(taking new prime, creating new co-primes list)
 			_buildNextCoprimesList(&coprimes, M, phi);
-			P = *(++coprimes->begin());
+			coprimes_count = phi;
+			P = coprimes[1];	// Next prime will always lay in second cell ("1" always occupies first cell)
 		}
 
         // Second stage. When we reach modulus M such, that n / Pj < M, we need no more expanding list, only reduce.
 		while (P * P <= n)
 		{
-			k = coprimes->size();
-			Cp -= (k - 1);
+			Cp -= (coprimes_count - 1);
 			// When there is more than 2 elements in the list, we need to reduce it
-			if (k > 2)
+			if (coprimes_count > 2)
 			{
-				_reduceCoprimesList(&coprimes, n);
-				if (coprimes->size() > 1) P = *(++coprimes->begin());
+				_reduceCoprimesList(&coprimes, coprimes_count, n);
+				if (coprimes_count > 1) P = coprimes[1];
 				else P = nSqrt;	// Skip reduce part of algorythm (P * P will always be greater than N)
 			}
 			else break;
 		}
+
+		delete[] coprimes;
 
 		return Cp;
     }
 
 private:
 	// Building next co-primes list using previous one, updating modulus and totient values
-	void _buildNextCoprimesList(NUM_LIST** coprimes, int &M, int &phi)
+	void _buildNextCoprimesList(int** coprimes, int &M, int &phi)
 	{
-		int i, k, n, P;
-		NUM_LIST* old_coprimes = *coprimes;
-		NUM_LIST* new_coprimes = new NUM_LIST();
+		int i, idxNew, j, k, n, P, nPhi;
+		int* old_coprimes = *coprimes;
+		int* new_coprimes;
+		
+		P = old_coprimes[1];
+		nPhi = phi * (P - 1);	// New Euler's function for new modulus
+		new_coprimes = new int[nPhi];
 
-		P = *(++old_coprimes->begin());
-
-		for (i = k = 0; i < P; ++i, k += M)
+		for (i = idxNew = k = 0; i < P; ++i, k += M)
 		{
-			for (NUM_LIST_IT it = old_coprimes->begin(); it != old_coprimes->end(); ++it)
+			for (j = 0; j < phi; ++j)
 			{
-				n = k + *it;
-				if (n % P) new_coprimes->push_back(n);
+				n = k + old_coprimes[j];
+				if (n % P) new_coprimes[idxNew++] = n;
 			}
 		}
 
 		M *= P;			// New modulus
-		phi *= (P - 1);	// New Euler's function for new modulus
+		phi = nPhi;
 		*coprimes = new_coprimes;
-		delete old_coprimes;
+		delete[] old_coprimes;
 	}
 
 	// Reduce list of co-primes so there must not exceed our N
-	void _reduceCoprimesList(NUM_LIST** coprimes, int N)
+	void _reduceCoprimesList(int** coprimes, int &coprimes_count, int N)
 	{
-		int P, kMax, x;
-		NUM_LIST* old_coprimes = *coprimes;
-		NUM_LIST* new_coprimes = new NUM_LIST();
+		int idxNew, idxOld, P, kMax, x;
+		int* old_coprimes = *coprimes;
+		int* new_coprimes = new int[coprimes_count];
 
-		new_coprimes->push_back(1);
+		new_coprimes[0] = 1;
 
-		NUM_LIST_IT it = old_coprimes->begin();
-		
-		P = *(++it);
-		kMax = N / *(++it);  // Using after-next prime to determine kMax
+		P = old_coprimes[1];
+		kMax = N / old_coprimes[2];  // Using after-next prime to determine kMax
 
-		for (; it != old_coprimes->end(); ++it)
+		for (idxNew = idxOld = 0; idxOld < coprimes_count; ++idxOld)
 		{
-			x = *it;
+			x = old_coprimes[idxOld];
 			if (x > kMax) break;
-			if (x % P) new_coprimes->push_back(x);
+			if (x % P) new_coprimes[idxNew++] = x;
 		}
 
+		coprimes_count = idxNew;
 		*coprimes = new_coprimes;
-		delete old_coprimes;
+		delete[] old_coprimes;
 	}
 };
 
@@ -164,7 +158,7 @@ private:
 int main()
 {
 	Solution x;
-	int n = 3;
+	int n = 500000000;
 
 	clock_t start = clock();
 	printf("\n%d = %d\n", n, x.countPrimes(n));
