@@ -112,3 +112,12 @@ class Solution:
                 break
 
         return Cp
+
+
+x = Solution()
+
+# for n in range(44, 231, 3):
+#     print(f"{n} - {x.countPrimes(n)}")
+
+n = 100
+print(f"{n} - {x.countPrimes(n)}")
