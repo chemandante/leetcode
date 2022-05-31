@@ -2,4 +2,5 @@ __*
 .*
 *.sln
 *.vcx*
-x64
+Debug
+Release

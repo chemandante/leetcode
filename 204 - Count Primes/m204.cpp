@@ -65,7 +65,7 @@ public:
 			{
 				// If there are more than 2 elements in co-primes list, we go to reduce stage of algorythm
 				coprimes_count = phi;
-				_reduceCoprimesList(&coprimes, coprimes_count, n);
+				_reduceCoprimesList(coprimes, coprimes_count, n);
 				if (coprimes_count > 1) P = coprimes[1];
 				else P = nSqrt;	// Skip reduce part of algorythm (P * P will always be greater than N)
 
@@ -85,7 +85,7 @@ public:
 			// When there is more than 2 elements in the list, we need to reduce it
 			if (coprimes_count > 2)
 			{
-				_reduceCoprimesList(&coprimes, coprimes_count, n);
+				_reduceCoprimesList(coprimes, coprimes_count, n);
 				if (coprimes_count > 1) P = coprimes[1];
 				else P = nSqrt;	// Skip reduce part of algorythm (P * P will always be greater than N)
 			}
@@ -125,27 +125,21 @@ private:
 	}
 
 	// Reduce list of co-primes so there must not exceed our N
-	void _reduceCoprimesList(int** coprimes, int &coprimes_count, int N)
+	void _reduceCoprimesList(int* coprimes, int &coprimes_count, int N)
 	{
 		int idxNew, idxOld, P, kMax, x;
-		int* old_coprimes = *coprimes;
-		int* new_coprimes = new int[coprimes_count];
 
-		new_coprimes[0] = 1;
-
-		P = old_coprimes[1];
-		kMax = N / old_coprimes[2];  // Using after-next prime to determine kMax
+		P = coprimes[1];
+		kMax = N / coprimes[2];  // Using after-next prime to determine kMax
 
 		for (idxNew = idxOld = 0; idxOld < coprimes_count; ++idxOld)
 		{
-			x = old_coprimes[idxOld];
+			x = coprimes[idxOld];
 			if (x > kMax) break;
-			if (x % P) new_coprimes[idxNew++] = x;
+			if (x % P) coprimes[idxNew++] = x;
 		}
 
 		coprimes_count = idxNew;
-		*coprimes = new_coprimes;
-		delete[] old_coprimes;
 	}
 };
 
