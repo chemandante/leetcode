@@ -8,20 +8,20 @@ def _nextNumber(num: int) -> int:
 
 
 class Solution:
-
     def isHappy(self, n: int) -> bool:
-        nums = {n}
+        tortoise = n
+        hare = n
 
-        while n != 1:
-            n = _nextNumber(n)
-            if n in nums:
+        while hare != 1:
+            tortoise = _nextNumber(tortoise)
+            hare = _nextNumber(_nextNumber(hare))
+            if hare == tortoise and hare != 1:
                 return False
-            nums.add(n)
 
         return True
 
 
 x = Solution()
 
-n = 23495739879283742
+n = 2
 print(x.isHappy(n))
