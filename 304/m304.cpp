@@ -1,20 +1,95 @@
-#include <cassert>
 #include <fstream>
-#include <map>
 #include <string>
 #include <sstream>
 #include <vector>
 
 using namespace std;
 
+// We will calc sum of region using matrix with partial sums.
+// Each element in the matrix of partial sums (psm[I,J]), contains sum of all cells of the
+// original matrix with i <= I, j <= J
+// Then we divide matrix on four non-overlapping regions: A, B, C and D in such a way that D is our needed region.
+// (this letters, A, B, C and D will stand for sum of cells of corresponding region):
+// -------------------------
+// |             |         |
+// |      A      |    B    |
+// |            a|        b|
+// |-----------------------|
+// |             |         |
+// |      C      |    D    |
+// |            c|        d|
+// -------------------------
+// a, b, c and d are the values of cells at right-bottom of corresponding region in the partial sum matrix
+// So, a = A (the cell 'a' contains sum of cells in region A of original matrix)
+// b = A + B => B = b - a (the cell 'b' contains sum of cells in regions A and B)
+// c = A + C => C = c - a
+// d = A + B + C + D.
+// We need calc the value of D:
+// D = d - A - B - C = d - a - (b - a) - (c - a) = d + a - b - c.
+
 class NumMatrix
 {
 private:
-	vector<vector<int>> m_matrix;
-	NumMatrix* m_pSubMatrix;	// Submatrix containing 2x2 sums of cells of the original matrix
+	int m_rows, m_cols;
+	int* m_pMatrix;	// Matrix of partial sums, m_pMatrix[I,J] contains sum of all cells with i <= I, j <= J
 
 public:
 	NumMatrix(vector<vector<int>>& matrix)
+	{
+		vector<vector<int>> submatrix;
+		int i, j, idx, cRow, cCol, nSum, nSumPrev;
+
+		m_rows = cRow = matrix.size();
+		m_cols = cCol = matrix[0].size();
+
+		m_pMatrix = (int*)malloc(cRow * cCol * sizeof(int));
+
+		// Building submatrix containing sums in 2x2 subblocks of original matrix
+		// Size of submatrix will be floor(M/2) x floor(N/2)
+		for (i = idx = 0; i < cRow; ++i)
+		{
+			for (j = nSum = 0; j < cCol; ++j, ++idx)
+			{
+				nSum += matrix[i][j];
+				// Adding previous partial row sum for any row other than first
+				nSumPrev = i > 0 ? m_pMatrix[idx - cCol] : 0;
+				// Storing sum
+				m_pMatrix[idx] = nSum + nSumPrev;
+			}
+		}
+	}
+
+	int sumRegion(int row1, int col1, int row2, int col2)
+	{
+		int a, b, c, d;
+		// Calculating sum of region as D = d + a - b - c
+		a = (row1 > 0 && col1 > 0) ? get(row1 - 1, col1 - 1) : 0;
+		b = (row1 > 0) ? get(row1 - 1, col2) : 0;
+		c = (col1 > 0) ? get(row2, col1 - 1) : 0;
+		d = get(row2, col2);
+
+		return d + a - b - c;
+	}
+
+	int sumRegionSimple(int row1, int col1, int row2, int col2)
+	{
+		return 0;
+	}
+
+	inline int get(int r, int c)
+	{
+		return m_pMatrix[r * m_cols + c];
+	}
+};
+
+class NumMatrixDycho
+{
+private:
+	vector<vector<int>> m_matrix;
+	NumMatrixDycho* m_pSubMatrix;	// Submatrix containing 2x2 sums of cells of the original matrix
+
+public:
+	NumMatrixDycho(vector<vector<int>>& matrix)
 	{
 		vector<vector<int>> submatrix;
 		vector<int> row;
@@ -38,7 +113,7 @@ public:
 			submatrix.push_back(row);
 		}
 
-		if (!submatrix.empty()) m_pSubMatrix = new NumMatrix(submatrix);
+		if (!submatrix.empty()) m_pSubMatrix = new NumMatrixDycho(submatrix);
 		else m_pSubMatrix = NULL;
 	}
 
