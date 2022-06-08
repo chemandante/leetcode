@@ -14,5 +14,7 @@
 ![M](docs/img/M.png) [1447. Simplified Fractions](https://leetcode.com/problems/simplified-fractions/) `C++`  
 ![E](docs/img/E.png) [1480. Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) `C`  
 ![H](docs/img/H.png) [2183. Count Array Pairs Divisible by K](https://leetcode.com/problems/count-array-pairs-divisible-by-k/) `Python`  
-![](docs/img/H.png) [2197. Replace Non-Coprime Numbers in Array](https://leetcode.com/problems/replace-non-coprime-numbers-in-array/) 
+![H](docs/img/H.png) [2197. Replace Non-Coprime Numbers in Array](https://leetcode.com/problems/replace-non-coprime-numbers-in-array/) 
 `Python`  
+![M](docs/img/M.png) [2280. Minimum Lines to Represent a Line Chart](https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart/) 
+`C++`  
