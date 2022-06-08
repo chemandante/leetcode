@@ -1,5 +1,6 @@
 ### Problems solved:
 
+[69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) `C++`  
 [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) `C++`  
 [202. Happy Number](https://leetcode.com/problems/happy-number/) `Python`  
 [204. Count Primes](https://leetcode.com/problems/count-primes/) `C++` `Python`  
@@ -14,5 +15,3 @@
 [2183. Count Array Pairs Divisible by K](https://leetcode.com/problems/count-array-pairs-divisible-by-k/) `Python`  
 [2197. Replace Non-Coprime Numbers in Array](https://leetcode.com/problems/replace-non-coprime-numbers-in-array/) 
 `Python`  
-
-### Problems in progress:
