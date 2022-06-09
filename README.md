@@ -1,6 +1,7 @@
 ### Problems solved:
 
 ![M](docs/img/M.png) [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) `C++`  
+![H](docs/img/H.png) [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/) `C++`  
 ![E](docs/img/E.png) [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) `C++`  
 ![E](docs/img/E.png) [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) `C++`  
 ![M](docs/img/M.png) [89. Gray Code](https://leetcode.com/problems/gray-code/) `C++`  
