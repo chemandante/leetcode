@@ -1,0 +1,48 @@
+Generating Legendre sequence is often used in radar and digital communication applications, because these sequences have perfect autocorrelation function.
+I have to solve this problem during my work for digital communication device.
+
+I want to contribute this question to look how other people will solve it.
+
+I think this question has medium difficulty.
+
+
+Given a prime number P, return Legendre seqence for this prime. Legendre sequence L[] is an array of length P, containing -1 or 1 for every element L[k]. L[k] is a Legendre symbol for k modulo P (https://en.wikipedia.org/wiki/Legendre_symbol), i.e. L[k] qeuals to 1 if k is a quadratic residue modulo P, and equals to -1 if k is a quadratic non-residue modulo P. L[0] = 1.
+
+Number A (A < P) is a quadratic residue modulo P if there exists a natural number x such that x*x = A mod P, else A is a quadratic non-residue. (https://en.wikipedia.org/wiki/Quadratic_residue).
+
+For example 2 is a quadratic residue modulo 7, because 3 * 3 = 9 = 2 mod 7. In other way, 3 is a quadratic non-residue, because there is no any square of natural number that gives a reminder 3 after division on 7.
+
+
+The idea is to iterate through all numbers from 0 to (p - 1)/2 and set all elements of result sequence to with index (i^2 mod p) to 1, because these elements will be quadratic residues. Since i^2 = (p - i)^2 mod p, there will be enough to iterate up to (p-1)/2 inclusive.
+
+```
+class Solution
+{
+public:
+	vector<int> genLegendreSequence(int p)
+	{
+		vector<int> res(p);
+		vector<int>::iterator it = res.begin();
+		// Initializing all elements with -1
+		while (it != res.end()) *it++ = -1;
+		// Itarating through all numbers from 0 to (p - 1) / 2 inclusive and set elements
+		// with index (i*i mod p) to 1
+		for (int i = 0; i <= p >> 1; ++i) res[i * i % p] = 1;
+
+		return res;
+	}
+};
+```
+
+
+Input: P = 7
+Output: [1, 1, 1, -1, 1, -1, -1]
+
+Input: P = 3
+Output: [1, 1, -1]
+
+Input: P = 13
+Output: [1, 1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, 1]
+
+Input: P = 41
+Output: [1, 1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, 1, 1, -1, 1, -1, 1, -1, -1, -1, -1, -1, 1, 1, 1, -1, -1, 1, 1, -1, 1, 1]
