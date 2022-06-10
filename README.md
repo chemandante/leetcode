@@ -1,6 +1,7 @@
 ### Problems solved:
 
 ![M](docs/img/M.png) [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) `C++`  
+![M](docs/img/M.png) [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) `C++`  
 ![H](docs/img/H.png) [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/) `C++`  
 ![E](docs/img/E.png) [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) `C++`  
 ![E](docs/img/E.png) [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) `C++`  
@@ -18,7 +19,5 @@
 ![M](docs/img/M.png) [1447. Simplified Fractions](https://leetcode.com/problems/simplified-fractions/) `C++`  
 ![E](docs/img/E.png) [1480. Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) `C`  
 ![H](docs/img/H.png) [2183. Count Array Pairs Divisible by K](https://leetcode.com/problems/count-array-pairs-divisible-by-k/) `Python`  
-![H](docs/img/H.png) [2197. Replace Non-Coprime Numbers in Array](https://leetcode.com/problems/replace-non-coprime-numbers-in-array/) 
-`Python`  
-![M](docs/img/M.png) [2280. Minimum Lines to Represent a Line Chart](https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart/) 
-`C++`  
+![H](docs/img/H.png) [2197. Replace Non-Coprime Numbers in Array](https://leetcode.com/problems/replace-non-coprime-numbers-in-array/) `Python`  
+![M](docs/img/M.png) [2280. Minimum Lines to Represent a Line Chart](https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart/) `C++`  
