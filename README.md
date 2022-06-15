@@ -13,6 +13,7 @@
 ![M](docs/img/M.png) [264. Ugly Number II](https://leetcode.com/problems/ugly-number-ii/) `Python`  
 ![M](docs/img/M.png) [304. Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/) `C++`  
 ![E](docs/img/E.png) [867. Transpose Matrix](https://leetcode.com/problems/transpose-matrix/) `Python`  
+![M](docs/img/M.png) [1048. Longest String Chain](https://leetcode.com/problems/longest-string-chain/) `C++`  
 ![E](docs/img/E.png) [1175. Prime Arrangements](https://leetcode.com/problems/prime-arrangements/) `C++`  
 ![H](docs/img/H.png) [1250. Check If It Is a Good Array](https://leetcode.com/problems/check-if-it-is-a-good-array/) `Python`  
 ![E](docs/img/E.png) [1332. Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/) `C++`  
