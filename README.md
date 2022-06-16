@@ -3,6 +3,7 @@
 ![M](docs/img/M.png) [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) `C++`  
 ![M](docs/img/M.png) [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) `C++`  
 ![M](docs/img/M.png) [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) `C++`  
+![M](docs/img/M.png) [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/) `C++`  
 ![H](docs/img/H.png) [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/) `C++`  
 ![E](docs/img/E.png) [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) `C++`  
 ![E](docs/img/E.png) [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) `C++`  
