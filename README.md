@@ -5,6 +5,7 @@
 ![M](docs/img/M.png) [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) `C++`  
 ![M](docs/img/M.png) [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/) `C++`  
 ![H](docs/img/H.png) [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/) `C++`  
+![M](docs/img/M.png) [50. Pow(x, n)](https://leetcode.com/problems/powx-n/) `C++`  
 ![E](docs/img/E.png) [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) `C++`  
 ![E](docs/img/E.png) [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) `C++`  
 ![M](docs/img/M.png) [89. Gray Code](https://leetcode.com/problems/gray-code/) `C++`  
