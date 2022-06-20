@@ -9,6 +9,7 @@
 ![E](docs/img/E.png) [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) `C++`  
 ![M](docs/img/M.png) [89. Gray Code](https://leetcode.com/problems/gray-code/) `C++`  
 ![E](docs/img/E.png) [136. Single Number](https://leetcode.com/problems/single-number/) `C++`  
+![M](docs/img/M.png) [137. Single Number II](https://leetcode.com/problems/single-number-ii/) `C++`  
 ![M](docs/img/M.png) [167. Two Sum II - Input Array Is Sorted]() `C++`  
 ![E](docs/img/E.png) [202. Happy Number](https://leetcode.com/problems/happy-number/) `Python`  
 ![M](docs/img/M.png) [204. Count Primes](https://leetcode.com/problems/count-primes/) `C++` `Python`  
