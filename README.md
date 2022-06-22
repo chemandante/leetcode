@@ -14,6 +14,7 @@
 ![M](docs/img/M.png) [167. Two Sum II - Input Array Is Sorted]() `C++`  
 ![E](docs/img/E.png) [202. Happy Number](https://leetcode.com/problems/happy-number/) `Python`  
 ![M](docs/img/M.png) [204. Count Primes](https://leetcode.com/problems/count-primes/) `C++` `Python`  
+![M](docs/img/M.png) [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) `C++`  
 ![E](docs/img/E.png) [263. Ugly Number](https://leetcode.com/problems/ugly-number/) `C++`  
 ![M](docs/img/M.png) [264. Ugly Number II](https://leetcode.com/problems/ugly-number-ii/) `Python`  
 ![M](docs/img/M.png) [304. Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/) `C++`  
