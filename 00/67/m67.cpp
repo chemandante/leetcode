@@ -19,6 +19,8 @@ public:
 			d >>= 1;
 		}
 
+		if (d) s.push_back('1');
+
 		reverse(s.begin(), s.end());
 		return s;
 	}
