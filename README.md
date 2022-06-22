@@ -28,4 +28,8 @@
 ![E](docs/img/E.png) [1480. Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) `C`  
 ![H](docs/img/H.png) [2183. Count Array Pairs Divisible by K](https://leetcode.com/problems/count-array-pairs-divisible-by-k/) `Python`  
 ![H](docs/img/H.png) [2197. Replace Non-Coprime Numbers in Array](https://leetcode.com/problems/replace-non-coprime-numbers-in-array/) `Python`  
-![M](docs/img/M.png) [2280. Minimum Lines to Represent a Line Chart](https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart/) `C++`  
+![M](docs/img/M.png) [2280. Minimum Lines to Represent a Line Chart](https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart/) `C++`
+
+### In progress:
+
+![H](docs/img/H.png) [1799. Maximize Score After N Operations](https://leetcode.com/problems/maximize-score-after-n-operations/)
