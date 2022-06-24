@@ -6,6 +6,7 @@
 ![M](docs/img/M.png) [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/) `C++`  
 ![H](docs/img/H.png) [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/) `C++`  
 ![M](docs/img/M.png) [50. Pow(x, n)](https://leetcode.com/problems/powx-n/) `C++`  
+![H](docs/img/H.png) [60. Permutation Sequence](https://leetcode.com/problems/permutation-sequence/) `C++`  
 ![E](docs/img/E.png) [67. Add Binary](https://leetcode.com/problems/add-binary/) `C++`  
 ![E](docs/img/E.png) [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) `C++`  
 ![E](docs/img/E.png) [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) `C++`  
