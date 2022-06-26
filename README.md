@@ -25,6 +25,7 @@
 ![E](docs/img/E.png) [1175. Prime Arrangements](https://leetcode.com/problems/prime-arrangements/) `C++`  
 ![H](docs/img/H.png) [1250. Check If It Is a Good Array](https://leetcode.com/problems/check-if-it-is-a-good-array/) `Python`  
 ![E](docs/img/E.png) [1332. Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/) `C++`  
+![M](docs/img/M.png) [1423. Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/) `C++`  
 ![M](docs/img/M.png) [1447. Simplified Fractions](https://leetcode.com/problems/simplified-fractions/) `C++`  
 ![E](docs/img/E.png) [1480. Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) `C`  
 ![H](docs/img/H.png) [2183. Count Array Pairs Divisible by K](https://leetcode.com/problems/count-array-pairs-divisible-by-k/) `Python`  
