@@ -1,4 +1,4 @@
-### Problems solved:
+Here is the list of solved problems:
 
 | No.  | Description (link to Leetcode)                                                                                                                                    | Explanation | Solutions                        |
 |:----:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|----------------------------------|
@@ -33,11 +33,12 @@
 | 1480 | ![E](img/E.png) [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)                                                                 |             | ![](img/c.png)                   |
 | 1647 | ![M](img/M.png) [Minimum Deletions to Make Character Frequencies Unique](https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/)   |             | ![](img/cpp.png)                 |
 | 1689 | ![M](img/M.png) [Partitioning Into Minimum Number Of Deci-Binary Numbers](https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/) |             | ![](img/cpp.png)                 |
+| 1710 | ![E](img/E.png) [Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck/)                                                               |             | ![](img/cpp.png)                 |
 | 2183 | ![H](img/H.png) [Count Array Pairs Divisible by K](https://leetcode.com/problems/count-array-pairs-divisible-by-k/)                                               |             | ![](img/py.png)                  |
 | 2197 | ![H](img/H.png) [Replace Non-Coprime Numbers in Array](https://leetcode.com/problems/replace-non-coprime-numbers-in-array/)                                       |             | ![](img/py.png)                  |
 | 2280 | ![M](img/M.png) [Minimum Lines to Represent a Line Chart](https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart/)                                 |             | ![](img/cpp.png)                 |
 
-### In progress:
+Work in progress:
 
 | No.  | Description (link to Leetcode)                                                                                              |
 |:----:|-----------------------------------------------------------------------------------------------------------------------------|
