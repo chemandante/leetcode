@@ -39,6 +39,7 @@ Here is the list of solved problems:
 | 307  | ![M](img/M.png) [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/)                                                               |             |         ![](img/cpp.png)         |
 | 462  | ![M](img/M.png) [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/)                               |             |         ![](img/cpp.png)         |
 | 695  | ![M](img/M.png) [Max Area of Island](https://leetcode.com/problems/max-area-of-island/)                                                                           |             |         ![](img/cpp.png)         |
+| 729  | ![M](img/M.png) [My Calendar I](https://leetcode.com/problems/my-calendar-i/)                                                                                     |             |         ![](img/py.png)          |
 | 867  | ![E](img/E.png) [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/)                                                                               |             |         ![](img/py.png)          |
 | 890  | ![M](img/M.png) [Find and Replace Pattern](https://leetcode.com/problems/find-and-replace-pattern/)                                                               |             |         ![](img/cpp.png)         |
 | 1048 | ![M](img/M.png) [Longest String Chain](https://leetcode.com/problems/longest-string-chain/)                                                                       |             |         ![](img/cpp.png)         |
@@ -60,3 +61,13 @@ Work in progress:
 | No.  | Description (link to Leetcode)                                                                                              |
 |:----:|-----------------------------------------------------------------------------------------------------------------------------|
 | 1799 | ![H](img/H.png) [1799. Maximize Score After N Operations](https://leetcode.com/problems/maximize-score-after-n-operations/) |
+
+### Basic algorithm implementations
+
+##### Binary search
+
+| No. | Solutions in which is implemented (links to github folder)                                                           | Notes                                                 |
+|:---:|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| 34  | [Find First and Last Position of Element in Sorted Array](https://github.com/chemandante/leetcode/tree/master/00/34) | Search for leftmost and rightmost in series of equals |
+| 74  | [Search a 2D Matrix](https://github.com/chemandante/leetcode/tree/master/00/74)                                      | Simple search with linear indexind of 2D matrix       |
+| 240 | [Search a 2D Matrix II](https://github.com/chemandante/leetcode/tree/master/02/40)                                   | Simple search                                         |
