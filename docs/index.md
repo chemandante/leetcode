@@ -37,6 +37,7 @@ Here is the list of solved problems:
 | 264  | ![M](img/M.png) [Ugly Number II](https://leetcode.com/problems/ugly-number-ii/)                                                                                   |             |         ![](img/py.png)          |
 | 304  | ![M](img/M.png) [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)                                                     |             |         ![](img/cpp.png)         |
 | 307  | ![M](img/M.png) [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/)                                                               |             |         ![](img/cpp.png)         |
+| 377  | ![M](img/M.png) [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)                                                                           |             |         ![](img/py.png)          |
 | 378  | ![M](img/M.png) [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)                                 |             |         ![](img/py.png)          |
 | 462  | ![M](img/M.png) [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/)                               |             |         ![](img/cpp.png)         |
 | 695  | ![M](img/M.png) [Max Area of Island](https://leetcode.com/problems/max-area-of-island/)                                                                           |             |         ![](img/cpp.png)         |
@@ -68,7 +69,7 @@ Work in progress:
 
 #### Binary search
 
-| No. | Solutions in which is implemented (links to github folder)                                                           | Notes                                                 |
+| No. | Solutions where implemented (links to github folder)                                                                 | Notes                                                 |
 |:---:|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
 | 34  | [Find First and Last Position of Element in Sorted Array](https://github.com/chemandante/leetcode/tree/master/00/34) | Search for leftmost and rightmost in series of equals |
 | 74  | [Search a 2D Matrix](https://github.com/chemandante/leetcode/tree/master/00/74)                                      | Simple search with linear indexind of 2D matrix       |
@@ -76,7 +77,7 @@ Work in progress:
 
 #### Greatest common divisor (GCD)
 
-| No.  | Solutions in which is implemented (links to github folder)                                           | Notes |
+| No.  | Solutions where implemented (links to github folder)                                                 | Notes |
 |:----:|------------------------------------------------------------------------------------------------------|-------|
 | 1447 | [Simplified Fractions](https://github.com/chemandante/leetcode/tree/master/14/47)                    |       |
 | 2280 | [Minimum Lines to Represent a Line Chart](https://github.com/chemandante/leetcode/tree/master/22/80) |       |
