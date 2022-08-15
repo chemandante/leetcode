@@ -41,10 +41,12 @@ Here is the list of solved problems:
 | 264  | ![M](img/M.png) [Ugly Number II](https://leetcode.com/problems/ugly-number-ii/)                                                                                   |             |         ![](img/py.png)          |
 | 304  | ![M](img/M.png) [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)                                                     |             |         ![](img/cpp.png)         |
 | 307  | ![M](img/M.png) [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/)                                                               |             |         ![](img/cpp.png)         |
+| 374  | ![E](img/E.png) [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)                                                       |             |         ![](img/py.png)          |
 | 377  | ![M](img/M.png) [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)                                                                           |             |         ![](img/py.png)          |
 | 378  | ![M](img/M.png) [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)                                 |             |         ![](img/py.png)          |
 | 462  | ![M](img/M.png) [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/)                               |             |         ![](img/cpp.png)         |
 | 695  | ![M](img/M.png) [Max Area of Island](https://leetcode.com/problems/max-area-of-island/)                                                                           |             |         ![](img/cpp.png)         |
+| 704  | ![E](img/E.png) [Binary Search](https://leetcode.com/problems/binary-search/)                                                                                     |             |         ![](img/py.png)          |
 | 729  | ![M](img/M.png) [My Calendar I](https://leetcode.com/problems/my-calendar-i/)                                                                                     |             |         ![](img/py.png)          |
 | 858  | ![M](img/M.png) [Mirror Reflection](https://leetcode.com/problems/mirror-reflection/)                                                                             |             |         ![](img/cpp.png)         |
 | 867  | ![E](img/E.png) [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/)                                                                               |             |         ![](img/py.png)          |
@@ -66,9 +68,9 @@ Here is the list of solved problems:
 
 Work in progress:
 
-| No.  | Description (link to Leetcode)                                                                                              |
-|:----:|-----------------------------------------------------------------------------------------------------------------------------|
-| 1799 | ![H](img/H.png) [1799. Maximize Score After N Operations](https://leetcode.com/problems/maximize-score-after-n-operations/) |
+| No.  | Description (link to Leetcode)                                                                                        |
+|:----:|-----------------------------------------------------------------------------------------------------------------------|
+| 1799 | ![H](img/H.png) [Maximize Score After N Operations](https://leetcode.com/problems/maximize-score-after-n-operations/) |
 
 ### Basic algorithm implementations
 
@@ -76,9 +78,10 @@ Work in progress:
 
 | No. | Solutions where implemented (links to github folder)                                                                 | Notes                                                       |
 |:---:|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| 34  | [Find First and Last Position of Element in Sorted Array](https://github.com/chemandante/leetcode/tree/master/00/34) | [C++] Search for leftmost and rightmost in series of equals |
-| 74  | [Search a 2D Matrix](https://github.com/chemandante/leetcode/tree/master/00/74)                                      | [C++] Simple search with linear indexind of 2D matrix       |
-| 240 | [Search a 2D Matrix II](https://github.com/chemandante/leetcode/tree/master/02/40)                                   | [C++] Simple search                                         |
+| 34  | [Find First and Last Position of Element in Sorted Array](https://github.com/chemandante/leetcode/tree/master/00/34) | `C++` Search for leftmost and rightmost in series of equals |
+| 74  | [Search a 2D Matrix](https://github.com/chemandante/leetcode/tree/master/00/74)                                      | `C++` Simple search with linear indexind of 2D matrix       |
+| 240 | [Search a 2D Matrix II](https://github.com/chemandante/leetcode/tree/master/02/40)                                   | `C++` Simple search                                         |
+| 704 | [Binary Search](https://github.com/chemandante/leetcode/tree/master/07/04)                                           | `Py` Simple search                                          |
 
 #### Greatest common divisor (GCD)
 
