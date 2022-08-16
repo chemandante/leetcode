@@ -1,6 +1,6 @@
 Here is the list of solved problems:
 
-| No.  | Description (link to Leetcode)                                                                                                                                    | Explanation |            Solutions             |
+| No.  | Description (link to Leetcode)                                                                                                                                    | Explanation |               Lang               |
 |:----:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|:--------------------------------:|
 |  2   | ![M](img/M.png) [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)                                                                                 |             |         ![](img/cpp.png)         |
 |  3   | ![M](img/M.png) [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)                   |             |         ![](img/cpp.png)         |
@@ -10,6 +10,7 @@ Here is the list of solved problems:
 |  25  | ![H](img/H.png) [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)                                                               |             |         ![](img/py.png)          |
 |  30  | ![H](img/H.png) [Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)                             |             |         ![](img/py.png)          |
 |  34  | ![M](img/M.png) [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) |             |         ![](img/cpp.png)         |
+|  35  | ![E](img/E.png) [Search Insert Position](https://leetcode.com/problems/search-insert-position/)                                                                   |             |         ![](img/py.png)          |
 |  41  | ![H](img/H.png) [First Missing Positive](https://leetcode.com/problems/first-missing-positive/)                                                                   |             |         ![](img/cpp.png)         |
 |  50  | ![M](img/M.png) [Pow(x, n)](https://leetcode.com/problems/powx-n/)                                                                                                |             |         ![](img/cpp.png)         |
 |  60  | ![H](img/H.png) [Permutation Sequence](https://leetcode.com/problems/permutation-sequence/)                                                                       |             |         ![](img/cpp.png)         |
@@ -49,6 +50,7 @@ Here is the list of solved problems:
 | 695  | ![M](img/M.png) [Max Area of Island](https://leetcode.com/problems/max-area-of-island/)                                                                           |             |         ![](img/cpp.png)         |
 | 704  | ![E](img/E.png) [Binary Search](https://leetcode.com/problems/binary-search/)                                                                                     |             |         ![](img/py.png)          |
 | 729  | ![M](img/M.png) [My Calendar I](https://leetcode.com/problems/my-calendar-i/)                                                                                     |             |         ![](img/py.png)          |
+| 852  | ![M](img/M.png) [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/)                                                   |             |         ![](img/py.png)          |
 | 858  | ![M](img/M.png) [Mirror Reflection](https://leetcode.com/problems/mirror-reflection/)                                                                             |             |         ![](img/cpp.png)         |
 | 867  | ![E](img/E.png) [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/)                                                                               |             |         ![](img/py.png)          |
 | 890  | ![M](img/M.png) [Find and Replace Pattern](https://leetcode.com/problems/find-and-replace-pattern/)                                                               |             |         ![](img/cpp.png)         |
@@ -80,7 +82,8 @@ Work in progress:
 | No. | Solutions where implemented (links to github folder)                                                                 | Notes                                                       |
 |:---:|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
 | 34  | [Find First and Last Position of Element in Sorted Array](https://github.com/chemandante/leetcode/tree/master/00/34) | `C++` Search for leftmost and rightmost in series of equals |
-| 74  | [Search a 2D Matrix](https://github.com/chemandante/leetcode/tree/master/00/74)                                      | `C++` Simple search with linear indexind of 2D matrix       |
+| 35  | [Search Insert Position](https://github.com/chemandante/leetcode/tree/master/00/35)                                  | `Py` Search for leftmost                                    |
+| 74  | [Search a 2D Matrix](https://github.com/chemandante/leetcode/tree/master/00/74)                                      | `C++` Simple search with linear indexing of 2D matrix       |
 | 240 | [Search a 2D Matrix II](https://github.com/chemandante/leetcode/tree/master/02/40)                                   | `C++` Simple search                                         |
 | 704 | [Binary Search](https://github.com/chemandante/leetcode/tree/master/07/04)                                           | `Py` Simple search                                          |
 
@@ -88,18 +91,18 @@ Work in progress:
 
 | No.  | Solutions where implemented (links to github folder)                                                 | Notes |
 |:----:|------------------------------------------------------------------------------------------------------|-------|
-| 1447 | [Simplified Fractions](https://github.com/chemandante/leetcode/tree/master/14/47)                    | C++   |
-| 2280 | [Minimum Lines to Represent a Line Chart](https://github.com/chemandante/leetcode/tree/master/22/80) | C++   |
+| 1447 | [Simplified Fractions](https://github.com/chemandante/leetcode/tree/master/14/47)                    | `C++` |
+| 2280 | [Minimum Lines to Represent a Line Chart](https://github.com/chemandante/leetcode/tree/master/22/80) | `C++` |
 
 #### Single-linked lists
 
 | No. | Solutions where implemented (links to github folder)                                  | Notes |
 |:---:|---------------------------------------------------------------------------------------|-------|
-| 25  | [Reverse Nodes in k-Group](https://github.com/chemandante/leetcode/tree/master/00/25) | Py    |
-| 92  | [Reverse Linked List II](https://github.com/chemandante/leetcode/tree/master/00/92)   | Py    |
+| 25  | [Reverse Nodes in k-Group](https://github.com/chemandante/leetcode/tree/master/00/25) | `Py`  |
+| 92  | [Reverse Linked List II](https://github.com/chemandante/leetcode/tree/master/00/92)   | `Py`  |
 
 ### Other helpers
 
-| No. | Solutions where implemented (links to github folder)                                  | Notes                                                  |
-|:---:|---------------------------------------------------------------------------------------|--------------------------------------------------------|
-| 25  | [Reverse Nodes in k-Group](https://github.com/chemandante/leetcode/tree/master/00/25) | ListNode Py implementation of `__str__` and `__repr__` |
+| No. | Solutions where implemented (links to github folder)                                  | Notes                                                    |
+|:---:|---------------------------------------------------------------------------------------|----------------------------------------------------------|
+| 25  | [Reverse Nodes in k-Group](https://github.com/chemandante/leetcode/tree/master/00/25) | ListNode `Py` implementation of `__str__` and `__repr__` |
