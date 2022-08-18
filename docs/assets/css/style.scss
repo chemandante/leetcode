@@ -342,6 +342,12 @@ a {
         border-right: 1px solid $table-border-color;
       }
     }
+
+    td {
+      img {
+        vertical-align: middle;
+      }
+    }
   }
 
   dl {
