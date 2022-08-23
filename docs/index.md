@@ -66,7 +66,9 @@ Here is the list of solved problems:
 | 1175 | ![E](img/E.png) [Prime Arrangements](https://leetcode.com/problems/prime-arrangements/)                                                                           |             |         ![](img/cpp.png)         |
 | 1250 | ![H](img/H.png) [Check If It Is a Good Array](https://leetcode.com/problems/check-if-it-is-a-good-array/)                                                         |             |         ![](img/py.png)          |
 | 1332 | ![E](img/E.png) [Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/)                                                 |             |         ![](img/cpp.png)         |
+| 1337 | ![E](img/E.png) [The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/)                                                   |             |         ![](img/py.png)          |
 | 1338 | ![M](img/M.png) [Reduce Array Size to The Half](https://leetcode.com/problems/reduce-array-size-to-the-half/)                                                     |             |         ![](img/py.png)          |
+| 1346 | ![E](img/E.png) [Check If N and Its Double Exist](https://leetcode.com/problems/check-if-n-and-its-double-exist/)                                                 |             |         ![](img/py.png)          |
 | 1351 | ![E](img/E.png) [Count Negative Numbers in a Sorted Matrix](https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/)                             |             |         ![](img/py.png)          |
 | 1385 | ![E](img/E.png) [Find the Distance Value Between Two Arrays](https://leetcode.com/problems/find-the-distance-value-between-two-arrays/)                           |             |         ![](img/py.png)          |
 | 1423 | ![M](img/M.png) [Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/)                               |             |         ![](img/cpp.png)         |
@@ -98,7 +100,7 @@ Work in progress:
 | 35  | [Search Insert Position](https://github.com/chemandante/leetcode/tree/master/00/35)                                  | `Py` Search for leftmost                                    |
 | 74  | [Search a 2D Matrix](https://github.com/chemandante/leetcode/tree/master/00/74)                                      | `C++` Simple search with linear indexing of 2D matrix       |
 | 240 | [Search a 2D Matrix II](https://github.com/chemandante/leetcode/tree/master/02/40)                                   | `C++` Simple search                                         |
-| 704 | [Binary Search](https://github.com/chemandante/leetcode/tree/master/07/04)                                           | `Py` Simple search                                          |
+| 704 | [Binary Search](https://github.com/chemandante/leetcode/tree/master/07/04)                                           | `Py` `Swift` Simple search                                  |
 
 #### Greatest common divisor (GCD)
 
