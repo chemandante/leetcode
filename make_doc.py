@@ -15,15 +15,22 @@ c_langs = {"c": Lang.C, "cpp": Lang.CPP, "py": Lang.PY, "swift": Lang.SW}
 c_lang_img = {Lang.C: "c", Lang.CPP: "cpp", Lang.PY: "py", Lang.SW: "sw"}
 
 problems = {}
-rexDir = re.compile("\\d{2}")  # Directory must be in form DD
-rexFile = re.compile("m(\\d+)\\.(\\w+)")  # Filename must be in correct form
+g_filesCnt = 0
+g_unsolved = 0
+
+rexDir = re.compile("\\d{2,4}")  # Directory must be in form DD or DDDD
+rexFile = re.compile("m(\\d+).*\\.(\\w+)")  # Filename must be in correct form
 rexSolved = re.compile("\\s*(//|#)\\s*solved", flags=re.I)  # \\(([A-Z])\\) (.+)")
 rexDescr = re.compile("\\s*(//|#)\\s*\\(([E|M|H])\\)\\s+(.+)")
 rexLink = re.compile("\\s*(//|#)\\s*(https:.+)")
 rexTemplate = re.compile("\\{block:(\\w+)\\}")
 
 
-def readDetails(fileName: str, lang: Lang, details: dict) -> bool:
+def readDetails(fileName: str, details: dict) -> bool:
+    global g_filesCnt, g_unsolved
+
+    g_filesCnt += 1
+
     # Try to find correct comments
     with open(fileName, "r", encoding="utf8") as f:
         isSolved = False
@@ -64,6 +71,9 @@ def readDetails(fileName: str, lang: Lang, details: dict) -> bool:
             if i > 6:
                 break
 
+    if not isSolved:
+        g_unsolved += 1
+
     return isSolved
 
 
@@ -79,7 +89,7 @@ def getProblemDetails(prNum: int, dir: str) -> dict:
                 # Check the language
                 lang = c_langs.get(match[2], Lang.UNK)
                 if lang != lang.UNK:
-                    if readDetails(fullName, lang, details):
+                    if readDetails(fullName, details):
                         details["lang"] |= lang
                     else:
                         print(f"'{fullName}' not solved yet")
@@ -95,19 +105,28 @@ def EnumerateProblems():
     for dir1 in os.listdir("."):
         # For directory NN
         if os.path.isdir(dir1) and rexDir.fullmatch(dir1):
-            prPreNum = 100 * int(dir1)
-            for dir2 in os.listdir("./" + dir1):
-                subDir = f"./{dir1}/{dir2}"
-                # For directory MM
-                if os.path.isdir(subDir) and rexDir.fullmatch(dir2):
-                    prNum = prPreNum + int(dir2)
-                    details = getProblemDetails(prNum, subDir)
-                    problems[prNum] = details
+            # For dir1 in form DD
+            if len(dir1) == 2:
+                prPreNum = 100 * int(dir1)
+                for dir2 in os.listdir("./" + dir1):
+                    subDir = f"./{dir1}/{dir2}"
+                    # For directory MM
+                    if os.path.isdir(subDir) and rexDir.fullmatch(dir2):
+                        prNum = prPreNum + int(dir2)
+                        problems[prNum] = getProblemDetails(prNum, subDir)
+            else:  # There are no any subfolders for dir1 containing more than 2 digits
+                prNum = int(dir1)
+                problems[prNum] = getProblemDetails(prNum, f"./{dir1}")
+
 
     for k, v in sorted(problems.items()):
         if "name" not in v:
             print(f"No correct description found for problem {k}")
             problems[k] = None
+
+    if g_unsolved:
+        print(f"{g_unsolved} {'file' if g_unsolved == 1 else 'files'} out of {g_filesCnt} "
+              f"{'is' if g_unsolved == 1 else 'are'} unsolved yet ({g_unsolved * 100 / g_filesCnt:.0f}%)")
 
 
 EnumerateProblems()
@@ -129,9 +148,8 @@ with open("index.template.md", "r", encoding="utf8") as fTemplate:
                             for flag in Lang:
                                 if flag & langs:
                                     strLangs += f"![](img/{c_lang_img[flag]}.png) "
-                            strRow = f"| {k} | {strDifficultyImage} {strLeetcodeLink} | | {strLangs} |\n"
+                            strRow = f"| {k} | {strDifficultyImage} {strLeetcodeLink} | | {strLangs}|\n"
                             fOut.write(strRow)
-                        else:
-                            print(f"Problem {k} not solved yet at all")
+
             else:
                 fOut.write(line)

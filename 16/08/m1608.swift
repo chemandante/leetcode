@@ -1,3 +1,7 @@
+// Solved:
+// (E) Special Array With X Elements Greater Than or Equal X
+// https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/
+
 class Solution {
 	func _findX(_ nums: [Int], _ l: Int, _ r: Int) -> Int {
 		if l >= r {

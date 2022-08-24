@@ -1,3 +1,7 @@
+// Solved:
+// (M) Simplified Fractions
+// https://leetcode.com/problems/simplified-fractions/
+
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <string>

@@ -1,3 +1,7 @@
+# Solved:
+# (H) Count Array Pairs Divisible by K
+# https://leetcode.com/problems/count-array-pairs-divisible-by-k/
+
 import math
 
 from typing import List

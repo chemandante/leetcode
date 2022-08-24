@@ -1,3 +1,7 @@
+// Solved:
+// (E) Maximum Units on a Truck
+// https://leetcode.com/problems/maximum-units-on-a-truck/
+
 #include <algorithm>
 #include <vector>
 

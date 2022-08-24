@@ -1,3 +1,7 @@
+# Solved:
+# (M) Peak Index in a Mountain Array
+# https://leetcode.com/problems/peak-index-in-a-mountain-array/
+
 from typing import List
 
 

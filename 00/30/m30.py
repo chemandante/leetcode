@@ -1,3 +1,7 @@
+# Solved:
+# (H) Substring with Concatenation of All Words
+# https://leetcode.com/problems/substring-with-concatenation-of-all-words/
+
 from collections import Counter, defaultdict
 from typing import List
 

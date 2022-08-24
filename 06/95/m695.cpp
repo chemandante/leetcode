@@ -1,3 +1,7 @@
+// Solved:
+// (M) Max Area of Island
+// https://leetcode.com/problems/max-area-of-island/
+
 #include <queue>
 #include <vector>
 

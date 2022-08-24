@@ -1,3 +1,7 @@
+# Solved:
+# (M) K-th Smallest Prime Fraction
+# https://leetcode.com/problems/k-th-smallest-prime-fraction/
+
 import heapq
 from typing import List
 

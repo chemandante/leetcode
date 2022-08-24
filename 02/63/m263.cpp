@@ -1,3 +1,7 @@
+// Solved:
+// (E) Ugly Number
+// https://leetcode.com/problems/ugly-number/
+
 #include <cmath>
 
 #define countof(n)     (sizeof(n)/sizeof(n[0]))

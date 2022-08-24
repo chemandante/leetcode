@@ -1,3 +1,7 @@
+# Solved:
+# (M) My Calendar I
+# https://leetcode.com/problems/my-calendar-i/
+
 class MyCalendar:
 
     def __init__(self):

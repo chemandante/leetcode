@@ -1,3 +1,7 @@
+# Solved:
+# (E) Reverse Linked List
+# https://leetcode.com/problems/reverse-linked-list/
+
 from typing import Optional
 
 

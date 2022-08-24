@@ -1,3 +1,5 @@
+// Solved
+
 #include <stdio.h>
 
 class Solution

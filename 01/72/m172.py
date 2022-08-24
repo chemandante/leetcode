@@ -1,3 +1,7 @@
+# Solved:
+# (M) Factorial Trailing Zeroes
+# https://leetcode.com/problems/factorial-trailing-zeroes/
+
 class Solution:
     def trailingZeroes(self, n: int) -> int:
         # One trailing zero of n! means that n! is divisible by 10, i.e. by 5 and 2 simultaneously

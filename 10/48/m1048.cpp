@@ -1,3 +1,7 @@
+// Solved:
+// (M) Longest String Chain
+// https://leetcode.com/problems/longest-string-chain/
+
 #include <list>
 #include <string>
 #include <vector>

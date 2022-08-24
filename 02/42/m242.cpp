@@ -1,3 +1,7 @@
+// Solved:
+// (E) Valid Anagram
+// https://leetcode.com/problems/valid-anagram/
+
 #include <string>
 
 using namespace std;

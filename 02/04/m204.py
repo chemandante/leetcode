@@ -1,3 +1,7 @@
+# Solved:
+# (M) Count Primes
+# https://leetcode.com/problems/count-primes/
+
 def _buildNextCoprimesList(coprimes: list, M: int) -> tuple[list, int, int]:
     """
     Building next co-primes list using previous one for new modulus M(i) = M(i-1) * P(i)

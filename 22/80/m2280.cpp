@@ -1,3 +1,7 @@
+// Solved:
+// (M) Minimum Lines to Represent a Line Chart
+// https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart/
+
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <algorithm>

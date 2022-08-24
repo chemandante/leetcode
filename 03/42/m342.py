@@ -1,3 +1,7 @@
+# Solved:
+# (E) Power of Four
+# https://leetcode.com/problems/power-of-four/
+
 class Solution:
     def isPowerOfFour(self, n: int) -> bool:
         # Obvious case: integer power of four can not be nor zero nor negative

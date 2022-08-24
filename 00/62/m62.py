@@ -1,3 +1,7 @@
+# Solved:
+# (M) Unique Paths
+# https://leetcode.com/problems/unique-paths/
+
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
         # Number of unique paths equals to the number of combinations "S choose Q" where S is total number of moves

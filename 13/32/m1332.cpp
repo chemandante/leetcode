@@ -1,3 +1,7 @@
+// Solved:
+// (E) Remove Palindromic Subsequences
+// https://leetcode.com/problems/remove-palindromic-subsequences/
+
 #include <string>
 
 using namespace std;

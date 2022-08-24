@@ -1,3 +1,7 @@
+// Solved:
+// (E) Add Binary
+// https://leetcode.com/problems/add-binary/
+
 #include <string>
 
 using namespace std;

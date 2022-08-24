@@ -1,3 +1,7 @@
+// Solved:
+// (E) Merge Sorted Array
+// https://leetcode.com/problems/merge-sorted-array/
+
 #include <vector>
 
 using namespace std;

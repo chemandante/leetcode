@@ -1,3 +1,7 @@
+// Solved:
+// (M) Pow(x, n)
+// https://leetcode.com/problems/powx-n/
+
 class Solution
 {
 public:

@@ -1,3 +1,6 @@
+// Solved:
+// (M) Mirror Reflection
+// https://leetcode.com/problems/mirror-reflection/
 
 int calcGCD(int a, int b)
 {

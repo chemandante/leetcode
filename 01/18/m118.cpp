@@ -1,3 +1,7 @@
+// Solved:
+// (E) Pascal's Triangle
+// https://leetcode.com/problems/pascals-triangle/
+
 #include <vector>
 
 using namespace std;

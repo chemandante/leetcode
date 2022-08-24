@@ -1,3 +1,7 @@
+// Solved:
+// (E) Arranging Coins
+// https://leetcode.com/problems/arranging-coins/
+
 class Solution {
 	func _calcSum(_ n: Int) -> Int {
 		// If n is even (this check used to avoid overflow)

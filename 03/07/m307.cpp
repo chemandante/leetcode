@@ -1,3 +1,7 @@
+// Solved:
+// (M) Range Sum Query - Mutable
+// https://leetcode.com/problems/range-sum-query-mutable/
+
 #include <vector>
 
 using namespace std;

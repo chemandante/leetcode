@@ -1,3 +1,7 @@
+# Solved:
+# (M) Reduce Array Size to The Half
+# https://leetcode.com/problems/reduce-array-size-to-the-half/
+
 from collections import Counter
 from typing import List
 

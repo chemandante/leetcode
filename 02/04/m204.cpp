@@ -1,3 +1,5 @@
+// Solved
+
 #include <cmath>
 
 #define countof(n)     (sizeof(n)/sizeof(n[0]))

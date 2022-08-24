@@ -1,3 +1,7 @@
+# Solved:
+# (E) Valid Perfect Square
+# https://leetcode.com/problems/valid-perfect-square/
+
 class Solution:
     def isPerfectSquare(self, num: int) -> bool:
         # Second LSB in full square can't be '1', because <full square> = 0 or 1 mod 4

@@ -1,3 +1,7 @@
+# Solved:
+# (E) Happy Number
+# https://leetcode.com/problems/happy-number/
+
 def _nextNumber(num: int) -> int:
     res = 0
     while num != 0:

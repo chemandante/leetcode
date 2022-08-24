@@ -1,3 +1,7 @@
+# Solved:
+# (E) Sqrt(x)
+# https://leetcode.com/problems/sqrtx/
+
 class Solution:
     def mySqrt(self, x: int) -> int:
         bit = 1 << 15

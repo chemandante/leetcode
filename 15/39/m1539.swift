@@ -1,3 +1,7 @@
+// Solved:
+// (E) Kth Missing Positive Number
+// https://leetcode.com/problems/kth-missing-positive-number/
+
 class Solution {
 	func findKthPositive(_ arr: [Int], _ k: Int) -> Int {
 		// Key idea: at position 'i' exactly 'arr[i] - i - 1' positive numbers are missing

@@ -1,3 +1,7 @@
+// Solved:
+// (M) Partition List
+// https://leetcode.com/problems/partition-list/
+
 // Definition for singly-linked list.
 struct ListNode {
     int val;

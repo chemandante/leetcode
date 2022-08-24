@@ -1,3 +1,7 @@
+// Solved:
+// (E) Prime Arrangements
+// https://leetcode.com/problems/prime-arrangements/
+
 #include <stdint.h>
 #include <stdio.h>
 

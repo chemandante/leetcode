@@ -1,3 +1,7 @@
+// Solved:
+// (M) Gray Code
+// https://leetcode.com/problems/gray-code/
+
 #include <vector>
 
 using namespace std;

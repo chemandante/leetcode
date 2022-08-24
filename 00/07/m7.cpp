@@ -1,3 +1,7 @@
+// Solved:
+// (M) Reverse Integer
+// https://leetcode.com/problems/reverse-integer/
+
 #include <stdio.h>
 #include <stdlib.h>
 

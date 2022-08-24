@@ -1,3 +1,5 @@
+// Solved
+
 class Solution {
 	func search(_ nums: [Int], _ target: Int) -> Int {
 		var l = 0, r = nums.count - 1

@@ -1,3 +1,7 @@
+# Solved:
+# (H) Replace Non-Coprime Numbers in Array
+# https://leetcode.com/problems/replace-non-coprime-numbers-in-array/
+
 import math
 from typing import List
 

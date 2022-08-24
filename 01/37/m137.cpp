@@ -1,3 +1,7 @@
+// Solved:
+// (M) Single Number II
+// https://leetcode.com/problems/single-number-ii/
+
 #include <vector>
 
 using namespace std;

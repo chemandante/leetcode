@@ -1,3 +1,7 @@
+# Solved:
+# (E) Power of Three
+# https://leetcode.com/problems/power-of-three/
+
 class Solution:
     def isPowerOfThree(self, n: int) -> bool:
         # All power of three will divide maximal value of 3**19 that fits into 32-bit signed integer

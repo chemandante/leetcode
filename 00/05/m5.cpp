@@ -1,3 +1,7 @@
+// Solved:
+// (M) Longest Palindromic Substring
+// https://leetcode.com/problems/longest-palindromic-substring/
+
 #include <string>
 
 using namespace std;

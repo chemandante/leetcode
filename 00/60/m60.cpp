@@ -1,3 +1,7 @@
+// Solved:
+// (H) Permutation Sequence
+// https://leetcode.com/problems/permutation-sequence/
+
 #include <stdlib.h>
 #include <string>
 

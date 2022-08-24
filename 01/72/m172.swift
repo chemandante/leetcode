@@ -1,3 +1,5 @@
+// Solved
+
 class Solution {
 	func trailingZeroes(_ n: Int) -> Int {
 		// One trailing zero of n! means that n! is divisible by 10, i.e. by 5 and 2 simultaneously

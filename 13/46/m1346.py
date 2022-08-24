@@ -1,3 +1,7 @@
+# Solved:
+# (E) Check If N and Its Double Exist
+# https://leetcode.com/problems/check-if-n-and-its-double-exist/
+
 from typing import List
 
 
