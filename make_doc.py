@@ -20,13 +20,58 @@ g_unsolved = 0
 
 rexDir = re.compile("\\d{2,4}")  # Directory must be in form DD or DDDD
 rexFile = re.compile("m(\\d+).*\\.(\\w+)")  # Filename must be in correct form
-rexSolved = re.compile("\\s*(/{2,}|#+)\\s*solved", flags=re.I)  # \\(([A-Z])\\) (.+)")
-rexDescr = re.compile("\\s*(/{2,}|#+)\\s*\\(([E|M|H])\\)\\s+(.+)")
-rexLink = re.compile("\\s*(/{2,}|#+)\\s*(https:.+)")
+rexComment = re.compile(r"\s*(/{2,}|#+)\s*")
+rexSolved = re.compile("solved", flags=re.I)
+rexDescr = re.compile("\\(([E|M|H])\\)\\s+(.+)")
+rexLink = re.compile("(https:.+)")
+rexHelper = re.compile(r"helper:\s*(.*)", flags=re.I)
 rexTemplate = re.compile("\\{block:(\\w+)\\}")
 
 
-def readDetails(fileName: str, details: dict) -> bool:
+def readDescription(fileName: str, line: str, details: dict) -> bool:
+    match = rexDescr.match(line)
+    if match:
+        if "difficulty" in details:
+            if details["difficulty"] != match[1]:
+                print(f"Difficulty of the problem in {fileName} differs from other files in dir")
+        else:
+            details["difficulty"] = match[1]
+
+        if "name" in details:
+            if details["name"] != match[2]:
+                print(f"Name of the problem in {fileName} differs from other files in dir")
+        else:
+            details["name"] = match[2]
+
+        return True
+    return False
+
+def readLink(fileName: str, line: str, details: dict) -> bool:
+    match = rexLink.match(line)
+    if match:
+        if "link" in details:
+            if details["link"] != match[1]:
+                print(f"Leetcode link in {fileName} differs from other files in dir")
+        else:
+            details["link"] = match[1]
+
+        return True
+    return False
+
+
+def readHelper(fileName: str, line: str, details: dict, lang: Lang) -> bool:
+    match = rexHelper.match(line)
+    if match:
+        data = (lang, "https://github.com/chemandante/leetcode/blob/master" + fileName[1:], match[1])
+        if "helper" in details:
+            details["helper"].append(data)
+        else:
+            details["helper"] = [data]
+        return True
+    return False
+
+
+def readDetails(fileName: str, details: dict, lang: Lang) -> bool:
     global g_filesCnt, g_unsolved
 
     g_filesCnt += 1
@@ -36,39 +81,27 @@ def readDetails(fileName: str, details: dict) -> bool:
         isSolved = False
         i = 0
         for line in f:
-            if isSolved:
-                # Try to find correct description
-                match = rexDescr.match(line)
-                if match:
-                    if "difficulty" in details:
-                        if details["difficulty"] != match[2]:
-                            print(f"Difficulty of the problem in {fileName} differs from other files in dir")
-                    else:
-                        details["difficulty"] = match[2]
-
-                    if "name" in details:
-                        if details["name"] != match[3]:
-                            print(f"Name of the problem in {fileName} differs from other files in dir")
-                    else:
-                        details["name"] = match[3]
-
-                    continue
-                # Try to find leetcode link
-                match = rexLink.match(line)
-                if match:
-                    if "link" in details:
-                        if details["link"] != match[2]:
-                            print(f"Leetcode link in {fileName} differs from other files in dir")
-                    else:
-                        details["link"] = match[2]
-
-            else:
-                match = rexSolved.match(line)
-                if match:
-                    isSolved = True
+            match = rexComment.match(line)
+            if match:
+                line = line[match.span()[1]:]
+                if isSolved:
+                    # Try to find correct description
+                    if readDescription(fileName, line, details):
+                        continue
+                    # Try to find leetcode link
+                    if readLink(fileName, line, details):
+                        continue
+                    # Try to read helpers
+                    if readHelper(fileName, line, details, lang):
+                        continue
+                else:
+                    match = rexSolved.match(line)
+                    if match:
+                        isSolved = True
+                        continue
 
             i += 1
-            if i > 6:
+            if i > 5:
                 break
 
     if not isSolved:
@@ -89,7 +122,7 @@ def getProblemDetails(prNum: int, dir: str) -> dict:
                 # Check the language
                 lang = c_langs.get(match[2], Lang.UNK)
                 if lang != lang.UNK:
-                    if readDetails(fullName, details):
+                    if readDetails(fullName, details, lang):
                         details["lang"] |= lang
                     else:
                         print(f"'{fullName}' not solved yet")
@@ -150,6 +183,13 @@ with open("index.template.md", "r", encoding="utf8") as fTemplate:
                                     strLangs += f"![](img/{c_lang_img[flag]}.png) "
                             strRow = f"| {k} | {strDifficultyImage} {strLeetcodeLink} | | {strLangs}|\n"
                             fOut.write(strRow)
-
+                elif match[1] == "helpers":
+                    for k, v in sorted(problems.items()):
+                        if v and "helper" in v:
+                            for hlp in v["helper"]:
+                                strLink = f"<a href=\"{hlp[1]}\" target=\"_blank\">"\
+                                          f"<img src=\"img/{c_lang_img[hlp[0]]}.png\"></a>"
+                                strRow = f"| {hlp[2]} | {k}. {v['name']} {strLink} |\n"
+                                fOut.write(strRow)
             else:
                 fOut.write(line)

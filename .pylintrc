@@ -6,7 +6,8 @@ fail-under=9.6
 disable=invalid-name,
         missing-class-docstring,
         missing-function-docstring,
-        missing-module-docstring
+        missing-module-docstring,
+        redefined-outer-name
 
 # Good variable names regexes, separated by a comma. If names match any regex,
 # they will always be accepted

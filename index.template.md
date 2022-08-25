@@ -36,8 +36,8 @@ Work in progress:
 | 25  | [Reverse Nodes in k-Group](https://github.com/chemandante/leetcode/tree/master/00/25) | `Py`  |
 | 92  | [Reverse Linked List II](https://github.com/chemandante/leetcode/tree/master/00/92)   | `Py`  |
 
-### Other helpers
+#### Other helpers
 
-| No. | Solutions where implemented (links to github folder)                                  | Notes                                                    |
-|:---:|---------------------------------------------------------------------------------------|----------------------------------------------------------|
-| 25  | [Reverse Nodes in k-Group](https://github.com/chemandante/leetcode/tree/master/00/25) | ListNode `Py` implementation of `__str__` and `__repr__` |
+| Helper | Solution (clickable images) |
+|--------|-----------------------------|
+{block:helpers}
