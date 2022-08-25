@@ -56,6 +56,7 @@ Here is the list of solved problems:
 | 441 | ![E](img/E.png) [Arranging Coins](https://leetcode.com/problems/arranging-coins/) | | ![](img/sw.png) |
 | 462 | ![M](img/M.png) [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/) | | ![](img/cpp.png) |
 | 633 | ![M](img/M.png) [Sum of Square Numbers](https://leetcode.com/problems/sum-of-square-numbers/) | | ![](img/py.png) |
+| 668 | ![H](img/H.png) [Kth Smallest Number in Multiplication Table](https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/) | | ![](img/sw.png) |
 | 695 | ![M](img/M.png) [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | | ![](img/cpp.png) |
 | 704 | ![E](img/E.png) [Binary Search](https://leetcode.com/problems/binary-search/) | | ![](img/py.png) ![](img/sw.png) |
 | 729 | ![M](img/M.png) [My Calendar I](https://leetcode.com/problems/my-calendar-i/) | | ![](img/py.png) |

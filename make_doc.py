@@ -20,9 +20,9 @@ g_unsolved = 0
 
 rexDir = re.compile("\\d{2,4}")  # Directory must be in form DD or DDDD
 rexFile = re.compile("m(\\d+).*\\.(\\w+)")  # Filename must be in correct form
-rexSolved = re.compile("\\s*(//|#)\\s*solved", flags=re.I)  # \\(([A-Z])\\) (.+)")
-rexDescr = re.compile("\\s*(//|#)\\s*\\(([E|M|H])\\)\\s+(.+)")
-rexLink = re.compile("\\s*(//|#)\\s*(https:.+)")
+rexSolved = re.compile("\\s*(/{2,}|#+)\\s*solved", flags=re.I)  # \\(([A-Z])\\) (.+)")
+rexDescr = re.compile("\\s*(/{2,}|#+)\\s*\\(([E|M|H])\\)\\s+(.+)")
+rexLink = re.compile("\\s*(/{2,}|#+)\\s*(https:.+)")
 rexTemplate = re.compile("\\{block:(\\w+)\\}")
 
 
