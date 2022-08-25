@@ -52,6 +52,7 @@ Here is the list of solved problems:
 | 374 | ![E](img/E.png) [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | | ![](img/py.png) |
 | 377 | ![M](img/M.png) [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) | | ![](img/py.png) |
 | 378 | ![M](img/M.png) [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/) | | ![](img/py.png) |
+| 383 | ![E](img/E.png) [Ransom Note](https://leetcode.com/problems/ransom-note/) | | ![](img/sw.png) |
 | 387 | ![E](img/E.png) [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | | ![](img/py.png) |
 | 441 | ![E](img/E.png) [Arranging Coins](https://leetcode.com/problems/arranging-coins/) | | ![](img/sw.png) |
 | 462 | ![M](img/M.png) [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/) | | ![](img/cpp.png) |
