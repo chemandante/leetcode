@@ -9,6 +9,7 @@ Here is the list of solved problems:
 | 13 | ![E](img/E.png) [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | | ![](img/py.png) |
 | 25 | ![H](img/H.png) [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | | ![](img/py.png) |
 | 30 | ![H](img/H.png) [Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | | ![](img/py.png) |
+| 33 | ![M](img/M.png) [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | | ![](img/py.png) |
 | 34 | ![M](img/M.png) [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | | ![](img/py.png) ![](img/cpp.png) |
 | 35 | ![E](img/E.png) [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | | ![](img/py.png) |
 | 41 | ![H](img/H.png) [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | | ![](img/cpp.png) |
@@ -86,6 +87,7 @@ Here is the list of solved problems:
 | 1647 | ![M](img/M.png) [Minimum Deletions to Make Character Frequencies Unique](https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/) | | ![](img/cpp.png) |
 | 1689 | ![M](img/M.png) [Partitioning Into Minimum Number Of Deci-Binary Numbers](https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/) | | ![](img/cpp.png) |
 | 1710 | ![E](img/E.png) [Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck/) | | ![](img/cpp.png) |
+| 1855 | ![M](img/M.png) [Maximum Distance Between a Pair of Values](https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/) | | ![](img/py.png) |
 | 2091 | ![M](img/M.png) [Removing Minimum and Maximum From Array](https://leetcode.com/problems/removing-minimum-and-maximum-from-array/) | | ![](img/py.png) |
 | 2183 | ![H](img/H.png) [Count Array Pairs Divisible by K](https://leetcode.com/problems/count-array-pairs-divisible-by-k/) | | ![](img/py.png) |
 | 2197 | ![H](img/H.png) [Replace Non-Coprime Numbers in Array](https://leetcode.com/problems/replace-non-coprime-numbers-in-array/) | | ![](img/py.png) |
