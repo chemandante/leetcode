@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <list>
 #include <vector>
 
@@ -31,39 +32,42 @@ class Solution
 public:
 	int maxScore(vector<int>& nums)
 	{
-		list<sGCD>	listGCD;
-		sGCD		gcd;
+		vector<int>		aGCD(14, 0);  // Maximal GCD that nums[idx] has with any other num in nums
 		int nLen = nums.size();
 		int i, j, iScore, res;
 
 		// Creating list of all possible pairs and their GCD's
-		for (i = 0; i < nLen - 1; ++i)
-			for (j = i + 1; j < nLen; ++j)
-			{
-				gcd.gcd = calcGCD(nums[i], nums[j]);
-				gcd.a = i;
-				gcd.b = j;
-
-				listGCD.push_back(gcd);
-			}
-
-		listGCD.sort(cmp);
-
-		for (iScore = nLen >> 1, res = 0; iScore; iScore--)
+		for (i = 1; i < nLen; ++i)
 		{
-			gcd = *listGCD.begin();
-			
-			res += iScore * gcd.gcd;
-
-			for (auto it = listGCD.begin(); it != listGCD.end();)
+			for (j = 0; j < i; ++j)
 			{
-				if ((*it).a == gcd.a || (*it).b == gcd.b || (*it).b == gcd.a || (*it).a == gcd.b)
-				{
-					it = listGCD.erase(it);
-				}
-				else ++it;
+				int gcd = calcGCD(nums[i], nums[j]);
+				if (gcd > aGCD[i]) aGCD[i] = gcd;
+				if (gcd > aGCD[j]) aGCD[j] = gcd;
 			}
 		}
+
+		sort(aGCD.begin(), aGCD.end(), greater<int>());
+
+//		qsort(aGCD, sizeof(aGCD) / sizeof(aGCD[0]), sizeof(aGCD[0], );
+
+		//listGCD.sort(cmp);
+
+		//for (iScore = nLen >> 1, res = 0; iScore; iScore--)
+		//{
+		//	gcd = *listGCD.begin();
+		//	printf("%d,  ", gcd.gcd);
+		//	res += iScore * gcd.gcd;
+
+		//	for (auto it = listGCD.begin(); it != listGCD.end();)
+		//	{
+		//		if ((*it).a == gcd.a || (*it).b == gcd.b || (*it).b == gcd.a || (*it).a == gcd.b)
+		//		{
+		//			it = listGCD.erase(it);
+		//		}
+		//		else ++it;
+		//	}
+		//}
 
 		return res;
 	}
@@ -76,3 +80,19 @@ int main()
 
 	printf("%d\n", x.maxScore(nums));
 }
+
+//      0    1    2    3    4    5    6    7    8    9   10   11   12   13
+// 0 -
+// 1 - 19
+// 2 -  1    4
+// 3 -  1    1    1
+// 4 -  3    1    1    1
+// 5 -  1    1    1    1    5
+// 6 -  3    1    1    1    9    1
+// 7 -  3    4    4    1    9    1    9
+// 8 -  1    2    2    1    5    5    1    2
+// 9 -  1    4    4    1    1    1    1    4    2
+//10 -  3    2    2    1    3    1    3    6    2    2
+//11 -  3    1    1    1    3    1    3    3    1    1   21
+//12 -  1    2    2    1    1    1    1    2    2    2    2    1
+//13 -  1    1    1    1    1    1    1    1    1    1   47    1    1
