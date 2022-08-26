@@ -29,6 +29,7 @@ Here is the list of solved problems:
 | 119 | ![E](img/E.png) [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) | | ![](img/cpp.png) |
 | 136 | ![E](img/E.png) [Single Number](https://leetcode.com/problems/single-number/) | | ![](img/cpp.png) |
 | 137 | ![M](img/M.png) [Single Number II](https://leetcode.com/problems/single-number-ii/) | | ![](img/cpp.png) |
+| 153 | ![M](img/M.png) [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | | ![](img/sw.png) |
 | 167 | ![M](img/M.png) [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | | ![](img/sw.png) ![](img/cpp.png) |
 | 172 | ![M](img/M.png) [Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/) | | ![](img/py.png) ![](img/sw.png) |
 | 202 | ![E](img/E.png) [Happy Number](https://leetcode.com/problems/happy-number/) | | ![](img/py.png) |
