@@ -13,6 +13,7 @@ class Lang(Flag):
 
 c_langs = {"c": Lang.C, "cpp": Lang.CPP, "py": Lang.PY, "swift": Lang.SW}
 c_lang_img = {Lang.C: "c", Lang.CPP: "cpp", Lang.PY: "py", Lang.SW: "sw"}
+c_github_blob = "https://github.com/chemandante/leetcode/blob/master"
 
 problems = {}
 g_filesCnt = 0
@@ -62,7 +63,7 @@ def readLink(fileName: str, line: str, details: dict) -> bool:
 def readHelper(fileName: str, line: str, details: dict, lang: Lang) -> bool:
     match = rexHelper.match(line)
     if match:
-        data = (lang, "https://github.com/chemandante/leetcode/blob/master" + fileName[1:], match[1])
+        data = (lang, fileName, match[1])
         if "helper" in details:
             details["helper"].append(data)
         else:
@@ -124,6 +125,10 @@ def getProblemDetails(prNum: int, dir: str) -> dict:
                 if lang != lang.UNK:
                     if readDetails(fullName, details, lang):
                         details["lang"] |= lang
+                        if "solution" in details:
+                            details["solution"][lang] = fullName
+                        else:
+                            details["solution"] = {lang: fullName}
                     else:
                         print(f"'{fullName}' not solved yet")
                 else:
@@ -132,6 +137,11 @@ def getProblemDetails(prNum: int, dir: str) -> dict:
                 print(f"Strange file '{fileName}' found in '{dir}'")
 
     return details
+
+
+def makeGithubLink(fileName: str, lang: Lang) -> str:
+    strFileLink = c_github_blob + fileName[1:]
+    return f"<a href=\"{strFileLink}\" target=\"_blank\"><img src=\"img/{c_lang_img[lang]}.png\"></a>"
 
 
 def EnumerateProblems():
@@ -180,15 +190,14 @@ with open("index.template.md", "r", encoding="utf8") as fTemplate:
                             langs = v["lang"]
                             for flag in Lang:
                                 if flag & langs:
-                                    strLangs += f"![](img/{c_lang_img[flag]}.png) "
+                                    strLangs += makeGithubLink(v["solution"][flag], flag) + " "
                             strRow = f"| {k} | {strDifficultyImage} {strLeetcodeLink} | | {strLangs}|\n"
                             fOut.write(strRow)
                 elif match[1] == "helpers":
                     for k, v in sorted(problems.items()):
                         if v and "helper" in v:
                             for hlp in v["helper"]:
-                                strLink = f"<a href=\"{hlp[1]}\" target=\"_blank\">"\
-                                          f"<img src=\"img/{c_lang_img[hlp[0]]}.png\"></a>"
+                                strLink = makeGithubLink(hlp[1], hlp[0])
                                 strRow = f"| {hlp[2]} | {k}. {v['name']} {strLink} |\n"
                                 fOut.write(strRow)
             else:
