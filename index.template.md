@@ -4,12 +4,6 @@ Here is the list of solved problems:
 |:----:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|:--------------------------------:|
 {block:problems}
 
-Work in progress:
-
-| No.  | Description (link to Leetcode)                                                                                        |
-|:----:|-----------------------------------------------------------------------------------------------------------------------|
-| 1799 | ![H](img/H.png) [Maximize Score After N Operations](https://leetcode.com/problems/maximize-score-after-n-operations/) |
-
 ### Basic algorithm implementations
 
 #### Binary search
