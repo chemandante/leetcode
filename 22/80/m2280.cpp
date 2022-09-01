@@ -1,6 +1,7 @@
 // Solved:
 // (M) Minimum Lines to Represent a Line Chart
 // https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart/
+// GCD:
 
 #define _CRT_SECURE_NO_WARNINGS
 

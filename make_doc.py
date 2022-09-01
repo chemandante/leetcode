@@ -16,7 +16,7 @@ c_langs = {"c": Lang.C, "cpp": Lang.CPP, "py": Lang.PY, "swift": Lang.SW}
 c_lang_img = {Lang.C: "c", Lang.CPP: "cpp", Lang.PY: "py", Lang.SW: "sw"}
 c_github_blob = "https://github.com/chemandante/leetcode/blob/master"
 c_github_tree = "https://github.com/chemandante/leetcode/tree/master"
-c_algorithms = {"BINS": "Binary search"}
+c_algorithms = {"BINS": "Binary search", "GCD": "Greatest common divisor (GCD)", "SLL": "Single-linked list"}
 
 problems = {}
 algorithms = defaultdict(dict)
@@ -31,7 +31,7 @@ rexSolved = re.compile("solved", flags=re.I)
 rexDescr = re.compile(r"\(([EMH])\)\s+(.+)")
 rexLink = re.compile(r"(https:.+)")
 rexHelper = re.compile(r"helper:\s*(.*)", flags=re.I)
-rexAlgo = re.compile(r"([A-Z]+):\s+(.+)")
+rexAlgo = re.compile(r"([A-Z]+):\s+(.*)")
 rexTemplate = re.compile(r"\{block:(\w+)}")
 
 
@@ -249,6 +249,7 @@ with open("index.template.md", "r", encoding="utf8") as fTemplate:
                                     if lang & langs:
                                         strLangs += f"![](img/{c_lang_img[lang]}.png) "
                                 fOut.write(f"| {prNum} | {strLink} | {strLangs}| {desc} |\n")
+                            fOut.write("\n")
 
             else:
                 fOut.write(line)

@@ -109,17 +109,18 @@ Here is the list of solved problems:
 
 #### Greatest common divisor (GCD)
 
-| No.  | Solutions where implemented (links to github folder)                                                 | Notes |
-|:----:|------------------------------------------------------------------------------------------------------|-------|
-| 1447 | [Simplified Fractions](https://github.com/chemandante/leetcode/tree/master/14/47)                    | `C++` |
-| 2280 | [Minimum Lines to Represent a Line Chart](https://github.com/chemandante/leetcode/tree/master/22/80) | `C++` |
+| No. | Solutions where implemented | Lang | Notes |
+|:---:|-----------------------------|:----:|-------|
+| 1447 | <a href="https://github.com/chemandante/leetcode/tree/master/14/47" target="_blank">Simplified Fractions</a> | ![](img/cpp.png) |  |
+| 2280 | <a href="https://github.com/chemandante/leetcode/tree/master/22/80" target="_blank">Minimum Lines to Represent a Line Chart</a> | ![](img/cpp.png) |  |
 
-#### Single-linked lists
+#### Single-linked list
 
-| No. | Solutions where implemented (links to github folder)                                  | Notes |
-|:---:|---------------------------------------------------------------------------------------|-------|
-| 25  | [Reverse Nodes in k-Group](https://github.com/chemandante/leetcode/tree/master/00/25) | `Py`  |
-| 92  | [Reverse Linked List II](https://github.com/chemandante/leetcode/tree/master/00/92)   | `Py`  |
+| No. | Solutions where implemented | Lang | Notes |
+|:---:|-----------------------------|:----:|-------|
+| 25 | <a href="https://github.com/chemandante/leetcode/tree/master/00/25" target="_blank">Reverse Nodes in k-Group</a> | ![](img/py.png) |  |
+| 92 | <a href="https://github.com/chemandante/leetcode/tree/master/00/92" target="_blank">Reverse Linked List II</a> | ![](img/py.png) |  |
+
 
 #### Other helpers
 

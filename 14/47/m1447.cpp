@@ -1,6 +1,7 @@
 // Solved:
 // (M) Simplified Fractions
 // https://leetcode.com/problems/simplified-fractions/
+// GCD:
 
 #define _CRT_SECURE_NO_WARNINGS
 
