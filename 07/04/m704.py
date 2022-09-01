@@ -1,6 +1,7 @@
 # Solved:
 # (E) Binary Search
 # https://leetcode.com/problems/binary-search/
+# BINS: Simple search
 
 from typing import List
 

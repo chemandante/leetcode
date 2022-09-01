@@ -1,6 +1,7 @@
 # Solved:
 # (E) Search Insert Position
 # https://leetcode.com/problems/search-insert-position/
+# BINS: Search for leftmost
 
 from typing import List
 

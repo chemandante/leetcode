@@ -99,13 +99,13 @@ Here is the list of solved problems:
 
 #### Binary search
 
-| No. | Solutions where implemented (links to github folder)                                                                 | Notes                                                       |
-|:---:|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| 34  | [Find First and Last Position of Element in Sorted Array](https://github.com/chemandante/leetcode/tree/master/00/34) | `C++` Search for leftmost and rightmost in series of equals |
-| 35  | [Search Insert Position](https://github.com/chemandante/leetcode/tree/master/00/35)                                  | `Py` Search for leftmost                                    |
-| 74  | [Search a 2D Matrix](https://github.com/chemandante/leetcode/tree/master/00/74)                                      | `C++` Simple search with linear indexing of 2D matrix       |
-| 240 | [Search a 2D Matrix II](https://github.com/chemandante/leetcode/tree/master/02/40)                                   | `C++` Simple search                                         |
-| 704 | [Binary Search](https://github.com/chemandante/leetcode/tree/master/07/04)                                           | `Py` `Swift` Simple search                                  |
+| No. | Solutions where implemented | Lang | Notes |
+|:---:|-----------------------------|:----:|-------|
+| 34 | <a href="https://github.com/chemandante/leetcode/tree/master/00/34" target="_blank">Find First and Last Position of Element in Sorted Array</a> | ![](img/py.png) ![](img/cpp.png) | Search for leftmost and rightmost in series of equals |
+| 35 | <a href="https://github.com/chemandante/leetcode/tree/master/00/35" target="_blank">Search Insert Position</a> | ![](img/py.png) | Search for leftmost |
+| 74 | <a href="https://github.com/chemandante/leetcode/tree/master/00/74" target="_blank">Search a 2D Matrix</a> | ![](img/py.png) ![](img/cpp.png) | Simple search with linear indexing of 2D matrix |
+| 240 | <a href="https://github.com/chemandante/leetcode/tree/master/02/40" target="_blank">Search a 2D Matrix II</a> | ![](img/cpp.png) | Simple search |
+| 704 | <a href="https://github.com/chemandante/leetcode/tree/master/07/04" target="_blank">Binary Search</a> | ![](img/py.png) ![](img/sw.png) | Simple search |
 
 #### Greatest common divisor (GCD)
 

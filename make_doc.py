@@ -1,5 +1,6 @@
 import os
 import re
+from collections import defaultdict
 from enum import Flag, auto
 
 
@@ -14,19 +15,24 @@ class Lang(Flag):
 c_langs = {"c": Lang.C, "cpp": Lang.CPP, "py": Lang.PY, "swift": Lang.SW}
 c_lang_img = {Lang.C: "c", Lang.CPP: "cpp", Lang.PY: "py", Lang.SW: "sw"}
 c_github_blob = "https://github.com/chemandante/leetcode/blob/master"
+c_github_tree = "https://github.com/chemandante/leetcode/tree/master"
+c_algorithms = {"BINS": "Binary search"}
 
 problems = {}
+algorithms = defaultdict(dict)
+algorithms["UNK"] = list()
 g_filesCnt = 0
 g_unsolved = 0
 
-rexDir = re.compile("\\d{2,4}")  # Directory must be in form DD or DDDD
-rexFile = re.compile("m(\\d+).*\\.(\\w+)")  # Filename must be in correct form
+rexDir = re.compile(r"\d{2,4}")  # Directory must be in form DD or DDDD
+rexFile = re.compile(r"m(\d+).*\.(\w+)")  # Filename must be in correct form
 rexComment = re.compile(r"\s*(/{2,}|#+)\s*")
 rexSolved = re.compile("solved", flags=re.I)
-rexDescr = re.compile("\\(([E|M|H])\\)\\s+(.+)")
-rexLink = re.compile("(https:.+)")
+rexDescr = re.compile(r"\(([EMH])\)\s+(.+)")
+rexLink = re.compile(r"(https:.+)")
 rexHelper = re.compile(r"helper:\s*(.*)", flags=re.I)
-rexTemplate = re.compile("\\{block:(\\w+)\\}")
+rexAlgo = re.compile(r"([A-Z]+):\s+(.+)")
+rexTemplate = re.compile(r"\{block:(\w+)}")
 
 
 def readDescription(fileName: str, line: str, details: dict) -> bool:
@@ -47,6 +53,7 @@ def readDescription(fileName: str, line: str, details: dict) -> bool:
         return True
     return False
 
+
 def readLink(fileName: str, line: str, details: dict) -> bool:
     match = rexLink.match(line)
     if match:
@@ -58,6 +65,16 @@ def readLink(fileName: str, line: str, details: dict) -> bool:
 
         return True
     return False
+
+
+def readAlgo(prNum, fileName: str, line: str):
+    match = rexAlgo.match(line)
+    if match:
+        if match[1] in c_algorithms:
+            algorithms[match[1]][prNum] = match[2]
+        else:
+            algorithms["UNK"].append((match[1], fileName))
+        pass
 
 
 def readHelper(fileName: str, line: str, details: dict, lang: Lang) -> bool:
@@ -72,7 +89,7 @@ def readHelper(fileName: str, line: str, details: dict, lang: Lang) -> bool:
     return False
 
 
-def readDetails(fileName: str, details: dict, lang: Lang) -> bool:
+def readDetails(prNum: int, fileName: str, details: dict, lang: Lang) -> bool:
     global g_filesCnt, g_unsolved
 
     g_filesCnt += 1
@@ -92,12 +109,14 @@ def readDetails(fileName: str, details: dict, lang: Lang) -> bool:
                     # Try to find leetcode link
                     if readLink(fileName, line, details):
                         continue
+                    # Try to read algorithm description
+                    if readAlgo(prNum, fileName, line):
+                        continue
                     # Try to read helpers
                     if readHelper(fileName, line, details, lang):
                         continue
                 else:
-                    match = rexSolved.match(line)
-                    if match:
+                    if rexSolved.match(line):
                         isSolved = True
                         continue
 
@@ -123,7 +142,7 @@ def getProblemDetails(prNum: int, dir: str) -> dict:
                 # Check the language
                 lang = c_langs.get(match[2], Lang.UNK)
                 if lang != lang.UNK:
-                    if readDetails(fullName, details, lang):
+                    if readDetails(prNum, fullName, details, lang):
                         details["lang"] |= lang
                         if "solution" in details:
                             details["solution"][lang] = fullName
@@ -139,9 +158,14 @@ def getProblemDetails(prNum: int, dir: str) -> dict:
     return details
 
 
-def makeGithubLink(fileName: str, lang: Lang) -> str:
+def makeGithubBlobLink(fileName: str, lang: Lang) -> str:
     strFileLink = c_github_blob + fileName[1:]
     return f"<a href=\"{strFileLink}\" target=\"_blank\"><img src=\"img/{c_lang_img[lang]}.png\"></a>"
+
+
+def makeGithubTreeLink(dirName: str, text: str) -> str:
+    strFileLink = c_github_tree + dirName[1:]
+    return f"<a href=\"{strFileLink}\" target=\"_blank\">{text}</a>"
 
 
 def EnumerateProblems():
@@ -157,9 +181,12 @@ def EnumerateProblems():
                     if os.path.isdir(subDir) and rexDir.fullmatch(dir2):
                         prNum = prPreNum + int(dir2)
                         problems[prNum] = getProblemDetails(prNum, subDir)
+                        problems[prNum]["subdir"] = subDir
             else:  # There are no any subfolders for dir1 containing more than 2 digits
+                subDir = f"./{dir1}"
                 prNum = int(dir1)
-                problems[prNum] = getProblemDetails(prNum, f"./{dir1}")
+                problems[prNum] = getProblemDetails(prNum, subDir)
+                problems[prNum]["subdir"] = subDir
 
 
     for k, v in sorted(problems.items()):
@@ -170,6 +197,11 @@ def EnumerateProblems():
     if g_unsolved:
         print(f"{g_unsolved} {'file' if g_unsolved == 1 else 'files'} out of {g_filesCnt} "
               f"{'is' if g_unsolved == 1 else 'are'} unsolved yet ({g_unsolved * 100 / g_filesCnt:.0f}%)")
+
+    if len(algorithms["UNK"]) > 0:
+        print(f"{len(algorithms['UNK'])} unknown algorithm descriptions found:")
+        for d in algorithms["UNK"]:
+            print(f"\t'{d[0]}' in {d[1]}")
 
 
 EnumerateProblems()
@@ -190,15 +222,33 @@ with open("index.template.md", "r", encoding="utf8") as fTemplate:
                             langs = v["lang"]
                             for flag in Lang:
                                 if flag & langs:
-                                    strLangs += makeGithubLink(v["solution"][flag], flag) + " "
+                                    strLangs += makeGithubBlobLink(v["solution"][flag], flag) + " "
                             strRow = f"| {k} | {strDifficultyImage} {strLeetcodeLink} | | {strLangs}|\n"
                             fOut.write(strRow)
+
                 elif match[1] == "helpers":
                     for k, v in sorted(problems.items()):
                         if v and "helper" in v:
                             for hlp in v["helper"]:
-                                strLink = makeGithubLink(hlp[1], hlp[0])
+                                strLink = makeGithubBlobLink(hlp[1], hlp[0])
                                 strRow = f"| {hlp[2]} | {k}. {v['name']} {strLink} |\n"
                                 fOut.write(strRow)
+
+                elif match[1] == "algo":
+                    for k, v in c_algorithms.items():
+                        if len(algorithms[k]) > 0:
+                            fOut.write(f"#### {v}\n\n")
+                            fOut.write("| No. | Solutions where implemented | Lang | Notes |\n"
+                                       "|:---:|-----------------------------|:----:|-------|\n")
+                            for prNum, desc in sorted(algorithms[k].items()):
+                                details = problems[prNum]
+                                strLink = makeGithubTreeLink(details["subdir"], details['name'])
+                                strLangs = ""
+                                langs = details["lang"]
+                                for lang in Lang:
+                                    if lang & langs:
+                                        strLangs += f"![](img/{c_lang_img[lang]}.png) "
+                                fOut.write(f"| {prNum} | {strLink} | {strLangs}| {desc} |\n")
+
             else:
                 fOut.write(line)

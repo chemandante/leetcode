@@ -1,6 +1,7 @@
 // Solved:
 // (M) Find First and Last Position of Element in Sorted Array
 // https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+// BINS: Search for leftmost and rightmost in series of equals
 
 #include <vector>
 

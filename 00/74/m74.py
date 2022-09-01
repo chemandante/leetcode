@@ -1,6 +1,7 @@
 # Solved:
 # (M) Search a 2D Matrix
 # https://leetcode.com/problems/search-a-2d-matrix/
+# BINS: Simple search with linear indexing of 2D matrix
 
 from typing import List
 

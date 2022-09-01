@@ -6,15 +6,7 @@ Here is the list of solved problems:
 
 ### Basic algorithm implementations
 
-#### Binary search
-
-| No. | Solutions where implemented (links to github folder)                                                                 | Notes                                                       |
-|:---:|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| 34  | [Find First and Last Position of Element in Sorted Array](https://github.com/chemandante/leetcode/tree/master/00/34) | `C++` Search for leftmost and rightmost in series of equals |
-| 35  | [Search Insert Position](https://github.com/chemandante/leetcode/tree/master/00/35)                                  | `Py` Search for leftmost                                    |
-| 74  | [Search a 2D Matrix](https://github.com/chemandante/leetcode/tree/master/00/74)                                      | `C++` Simple search with linear indexing of 2D matrix       |
-| 240 | [Search a 2D Matrix II](https://github.com/chemandante/leetcode/tree/master/02/40)                                   | `C++` Simple search                                         |
-| 704 | [Binary Search](https://github.com/chemandante/leetcode/tree/master/07/04)                                           | `Py` `Swift` Simple search                                  |
+{block:algo}
 
 #### Greatest common divisor (GCD)
 
