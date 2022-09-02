@@ -59,6 +59,7 @@ Here is the list of solved problems:
 | 441 | ![E](img/E.png) [Arranging Coins](https://leetcode.com/problems/arranging-coins/) | | <a href="https://github.com/chemandante/leetcode/blob/master/04/41/m441.swift" target="_blank"><img src="img/sw.png"></a> |
 | 462 | ![M](img/M.png) [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/) | | <a href="https://github.com/chemandante/leetcode/blob/master/04/62/m462.cpp" target="_blank"><img src="img/cpp.png"></a> |
 | 633 | ![M](img/M.png) [Sum of Square Numbers](https://leetcode.com/problems/sum-of-square-numbers/) | | <a href="https://github.com/chemandante/leetcode/blob/master/06/33/m633.py" target="_blank"><img src="img/py.png"></a> |
+| 637 | ![E](img/E.png) [Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/) | | <a href="https://github.com/chemandante/leetcode/blob/master/06/37/m0637.c" target="_blank"><img src="img/c.png"></a> |
 | 668 | ![H](img/H.png) [Kth Smallest Number in Multiplication Table](https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/) | | <a href="https://github.com/chemandante/leetcode/blob/master/06/68/m668.swift" target="_blank"><img src="img/sw.png"></a> |
 | 695 | ![M](img/M.png) [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | | <a href="https://github.com/chemandante/leetcode/blob/master/06/95/m695.cpp" target="_blank"><img src="img/cpp.png"></a> |
 | 704 | ![E](img/E.png) [Binary Search](https://leetcode.com/problems/binary-search/) | | <a href="https://github.com/chemandante/leetcode/blob/master/07/04/m704.py" target="_blank"><img src="img/py.png"></a> <a href="https://github.com/chemandante/leetcode/blob/master/07/04/m704.swift" target="_blank"><img src="img/sw.png"></a> |
@@ -127,3 +128,4 @@ Here is the list of solved problems:
 | Helper | Solution (clickable images) |
 |--------|-----------------------------|
 | `Py` implementation of ListNode's `__str__` and `__repr__` | 25. Reverse Nodes in k-Group <a href="https://github.com/chemandante/leetcode/blob/master/00/25/m25.py" target="_blank"><img src="img/py.png"></a> |
+| Dynamic array | 637. Average of Levels in Binary Tree <a href="https://github.com/chemandante/leetcode/blob/master/06/37/m0637.c" target="_blank"><img src="img/c.png"></a> |
