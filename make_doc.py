@@ -16,7 +16,8 @@ c_langs = {"c": Lang.C, "cpp": Lang.CPP, "py": Lang.PY, "swift": Lang.SW}
 c_lang_img = {Lang.C: "c", Lang.CPP: "cpp", Lang.PY: "py", Lang.SW: "sw"}
 c_github_blob = "https://github.com/chemandante/leetcode/blob/master"
 c_github_tree = "https://github.com/chemandante/leetcode/tree/master"
-c_algorithms = {"BINS": "Binary search", "GCD": "Greatest common divisor (GCD)", "SLL": "Single-linked list"}
+c_algorithms = {"BIT": "Binary indexed tree (Fenwick tree)", "BINS": "Binary search",
+                "GCD": "Greatest common divisor (GCD)", "SLL": "Single-linked list"}
 
 problems = {}
 algorithms = defaultdict(dict)

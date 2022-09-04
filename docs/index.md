@@ -47,6 +47,7 @@ Here is the list of solved problems:
 | 278 | ![E](img/E.png) [First Bad Version](https://leetcode.com/problems/first-bad-version/) | | <a href="https://github.com/chemandante/leetcode/blob/master/02/78/m278.py" target="_blank"><img src="img/py.png"></a> |
 | 304 | ![M](img/M.png) [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/) | | <a href="https://github.com/chemandante/leetcode/blob/master/03/04/m304.cpp" target="_blank"><img src="img/cpp.png"></a> |
 | 307 | ![M](img/M.png) [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/) | | <a href="https://github.com/chemandante/leetcode/blob/master/03/07/m307.cpp" target="_blank"><img src="img/cpp.png"></a> |
+| 315 | ![H](img/H.png) [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) | | <a href="https://github.com/chemandante/leetcode/blob/master/03/15/m315.swift" target="_blank"><img src="img/sw.png"></a> <a href="https://github.com/chemandante/leetcode/blob/master/03/15/m315.c" target="_blank"><img src="img/c.png"></a> |
 | 326 | ![E](img/E.png) [Power of Three](https://leetcode.com/problems/power-of-three/) | | <a href="https://github.com/chemandante/leetcode/blob/master/03/26/m326.py" target="_blank"><img src="img/py.png"></a> |
 | 342 | ![E](img/E.png) [Power of Four](https://leetcode.com/problems/power-of-four/) | | <a href="https://github.com/chemandante/leetcode/blob/master/03/42/m342.py" target="_blank"><img src="img/py.png"></a> |
 | 350 | ![E](img/E.png) [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/) | | <a href="https://github.com/chemandante/leetcode/blob/master/03/50/m350.cpp" target="_blank"><img src="img/cpp.png"></a> |
@@ -98,6 +99,12 @@ Here is the list of solved problems:
 | 2280 | ![M](img/M.png) [Minimum Lines to Represent a Line Chart](https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart/) | | <a href="https://github.com/chemandante/leetcode/blob/master/22/80/m2280.cpp" target="_blank"><img src="img/cpp.png"></a> |
 
 ### Basic algorithm implementations
+
+#### Binary indexed tree (Fenwick tree)
+
+| No. | Solutions where implemented | Lang | Notes |
+|:---:|-----------------------------|:----:|-------|
+| 315 | <a href="https://github.com/chemandante/leetcode/tree/master/03/15" target="_blank">Count of Smaller Numbers After Self</a> | ![](img/sw.png) ![](img/c.png) | Tree for counting numbers less than X |
 
 #### Binary search
 
