@@ -29,8 +29,8 @@ class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         res = 0
         for x, row in enumerate(grid):
-            for y, cell in enumerate(row):
-                if cell == "1":
+            for y in range(0, len(row)):
+                if grid[x][y] == "1":
                     self._processIsland(grid, x, y)
                     res += 1
 
@@ -38,19 +38,19 @@ class Solution:
 
 
 x = Solution()
-print(x.numIslands([
+print(x.numIslands([  # Must be 1
     ["1", "1", "1", "1", "0"],
     ["1", "1", "0", "1", "0"],
     ["1", "1", "0", "0", "0"],
     ["0", "0", "0", "0", "0"]
 ]))
-print(x.numIslands([
+print(x.numIslands([  # Must be 3
     ["1", "1", "0", "0", "0"],
     ["1", "1", "0", "0", "0"],
     ["0", "0", "1", "0", "0"],
     ["0", "0", "0", "1", "1"]
 ]))
-print(x.numIslands(
+print(x.numIslands(  # Must be 1
     [["1", "1", "1", "1", "1", "0", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "1", "0", "1", "1"],
      ["0", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "1", "1", "1", "1", "1", "0"],
      ["1", "0", "1", "1", "1", "0", "0", "1", "1", "0", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"],
