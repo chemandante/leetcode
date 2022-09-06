@@ -1,4 +1,4 @@
-Here is the list of solved problems:
+Here is the list of solved problems. Language images are clickable and lead to the solution file.
 
 | No.  | Description (link to Leetcode)                                                                                                                                    | Explanation |               Lang               |
 |:----:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|:--------------------------------:|
@@ -134,12 +134,12 @@ Here is the list of solved problems:
 | 92 | <a href="https://github.com/chemandante/leetcode/tree/master/00/92" target="_blank">Reverse Linked List II</a> | ![](img/py.png) |  |
 
 
-#### Other helpers
+### Other helpers
 
-| Helper | Solution (clickable images) |
-|--------|-----------------------------|
-| `Py` implementation of ListNode's `__str__` and `__repr__` | 25. Reverse Nodes in k-Group <a href="https://github.com/chemandante/leetcode/blob/master/00/25/m25.py" target="_blank"><img src="img/py.png"></a> |
-| Dynamic array | 637. Average of Levels in Binary Tree <a href="https://github.com/chemandante/leetcode/blob/master/06/37/m0637.c" target="_blank"><img src="img/c.png"></a> |
-| `Swift` queue using single-linked list | 695. Max Area of Island <a href="https://github.com/chemandante/leetcode/blob/master/06/95/m695.swift" target="_blank"><img src="img/sw.png"></a> |
-| Building TreeNode’s tree from array | 814. Binary Tree Pruning <a href="https://github.com/chemandante/leetcode/blob/master/08/14/m814.swift" target="_blank"><img src="img/sw.png"></a> |
-| Building TreeNode's tree from array | 987. Vertical Order Traversal of a Binary Tree <a href="https://github.com/chemandante/leetcode/blob/master/09/87/m987.py" target="_blank"><img src="img/py.png"></a> |
+| Helper | Solution | Lang |
+|--------|----------|:----:|
+| `Py` implementation of ListNode's `__str__` and `__repr__` | 25.&ensp;Reverse Nodes in k-Group | <a href="https://github.com/chemandante/leetcode/blob/master/00/25/m25.py" target="_blank"><img src="img/py.png"></a> |
+| Dynamic array | 637.&ensp;Average of Levels in Binary Tree | <a href="https://github.com/chemandante/leetcode/blob/master/06/37/m0637.c" target="_blank"><img src="img/c.png"></a> |
+| `Swift` queue using single-linked list | 695.&ensp;Max Area of Island | <a href="https://github.com/chemandante/leetcode/blob/master/06/95/m695.swift" target="_blank"><img src="img/sw.png"></a> |
+| Building TreeNode’s tree from array | 814.&ensp;Binary Tree Pruning | <a href="https://github.com/chemandante/leetcode/blob/master/08/14/m814.swift" target="_blank"><img src="img/sw.png"></a> |
+| Building TreeNode's tree from array | 987.&ensp;Vertical Order Traversal of a Binary Tree | <a href="https://github.com/chemandante/leetcode/blob/master/09/87/m987.py" target="_blank"><img src="img/py.png"></a> |

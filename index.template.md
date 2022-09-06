@@ -1,4 +1,4 @@
-Here is the list of solved problems:
+Here is the list of solved problems. Language images are clickable and lead to the solution file.
 
 | No.  | Description (link to Leetcode)                                                                                                                                    | Explanation |               Lang               |
 |:----:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|:--------------------------------:|
@@ -8,8 +8,8 @@ Here is the list of solved problems:
 
 {block:algo}
 
-#### Other helpers
+### Other helpers
 
-| Helper | Solution (clickable images) |
-|--------|-----------------------------|
+| Helper | Solution | Lang |
+|--------|----------|:----:|
 {block:helpers}

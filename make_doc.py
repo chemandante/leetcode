@@ -232,7 +232,7 @@ with open("index.template.md", "r", encoding="utf8") as fTemplate:
                         if v and "helper" in v:
                             for hlp in v["helper"]:
                                 strLink = makeGithubBlobLink(hlp[1], hlp[0])
-                                strRow = f"| {hlp[2]} | {k}. {v['name']} {strLink} |\n"
+                                strRow = f"| {hlp[2]} | {k}.&ensp;{v['name']} | {strLink} |\n"
                                 fOut.write(strRow)
 
                 elif match[1] == "algo":
