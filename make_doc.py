@@ -21,7 +21,7 @@ c_algorithms = {"BIT": "Binary indexed tree (Fenwick tree)", "BINS": "Binary sea
 
 problems = {}
 algorithms = defaultdict(dict)
-algorithms["UNK"] = list()
+algorithms_unk = []
 g_filesCnt = 0
 g_unsolved = 0
 
@@ -74,8 +74,7 @@ def readAlgo(prNum, fileName: str, line: str):
         if match[1] in c_algorithms:
             algorithms[match[1]][prNum] = match[2]
         else:
-            algorithms["UNK"].append((match[1], fileName))
-        pass
+            algorithms_unk.append((match[1], fileName))
 
 
 def readHelper(fileName: str, line: str, details: dict, lang: Lang) -> bool:
@@ -125,7 +124,13 @@ def readDetails(prNum: int, fileName: str, details: dict, lang: Lang) -> bool:
             if i > 5:
                 break
 
-    if not isSolved:
+    if isSolved:
+        details["lang"] |= lang
+        if "solution" in details:
+            details["solution"][lang] = fileName
+        else:
+            details["solution"] = {lang: fileName}
+    else:
         g_unsolved += 1
 
     return isSolved
@@ -143,13 +148,7 @@ def getProblemDetails(prNum: int, dir: str) -> dict:
                 # Check the language
                 lang = c_langs.get(match[2], Lang.UNK)
                 if lang != lang.UNK:
-                    if readDetails(prNum, fullName, details, lang):
-                        details["lang"] |= lang
-                        if "solution" in details:
-                            details["solution"][lang] = fullName
-                        else:
-                            details["solution"] = {lang: fullName}
-                    else:
+                    if not readDetails(prNum, fullName, details, lang):
                         print(f"'{fullName}' not solved yet")
                 else:
                     print(f"Unknown file '{fileName}' found in '{dir}'")
@@ -199,9 +198,9 @@ def EnumerateProblems():
         print(f"{g_unsolved} {'file' if g_unsolved == 1 else 'files'} out of {g_filesCnt} "
               f"{'is' if g_unsolved == 1 else 'are'} unsolved yet ({g_unsolved * 100 / g_filesCnt:.0f}%)")
 
-    if len(algorithms["UNK"]) > 0:
-        print(f"{len(algorithms['UNK'])} unknown algorithm descriptions found:")
-        for d in algorithms["UNK"]:
+    if algorithms_unk:
+        print(f"{len(algorithms_unk)} unknown algorithm descriptions found:")
+        for d in algorithms_unk:
             print(f"\t'{d[0]}' in {d[1]}")
 
 
