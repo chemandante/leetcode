@@ -69,6 +69,7 @@ Here is the list of solved problems:
 | 744 | ![E](img/E.png) [Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/) | | <a href="https://github.com/chemandante/leetcode/blob/master/07/44/m744.py" target="_blank"><img src="img/py.png"></a> |
 | 786 | ![M](img/M.png) [K-th Smallest Prime Fraction](https://leetcode.com/problems/k-th-smallest-prime-fraction/) | | <a href="https://github.com/chemandante/leetcode/blob/master/07/86/m786.py" target="_blank"><img src="img/py.png"></a> |
 | 804 | ![E](img/E.png) [Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/) | | <a href="https://github.com/chemandante/leetcode/blob/master/08/04/m804.py" target="_blank"><img src="img/py.png"></a> |
+| 814 | ![M](img/M.png) [Binary Tree Pruning](https://leetcode.com/problems/binary-tree-pruning/) | | <a href="https://github.com/chemandante/leetcode/blob/master/08/14/m814.swift" target="_blank"><img src="img/sw.png"></a> |
 | 852 | ![M](img/M.png) [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/) | | <a href="https://github.com/chemandante/leetcode/blob/master/08/52/m852.py" target="_blank"><img src="img/py.png"></a> |
 | 858 | ![M](img/M.png) [Mirror Reflection](https://leetcode.com/problems/mirror-reflection/) | | <a href="https://github.com/chemandante/leetcode/blob/master/08/58/m858.cpp" target="_blank"><img src="img/cpp.png"></a> |
 | 867 | ![E](img/E.png) [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/) | | <a href="https://github.com/chemandante/leetcode/blob/master/08/67/m867.py" target="_blank"><img src="img/py.png"></a> |
@@ -140,4 +141,5 @@ Here is the list of solved problems:
 | `Py` implementation of ListNode's `__str__` and `__repr__` | 25. Reverse Nodes in k-Group <a href="https://github.com/chemandante/leetcode/blob/master/00/25/m25.py" target="_blank"><img src="img/py.png"></a> |
 | Dynamic array | 637. Average of Levels in Binary Tree <a href="https://github.com/chemandante/leetcode/blob/master/06/37/m0637.c" target="_blank"><img src="img/c.png"></a> |
 | `Swift` queue using single-linked list | 695. Max Area of Island <a href="https://github.com/chemandante/leetcode/blob/master/06/95/m695.swift" target="_blank"><img src="img/sw.png"></a> |
+| Building TreeNode’s tree from array | 814. Binary Tree Pruning <a href="https://github.com/chemandante/leetcode/blob/master/08/14/m814.swift" target="_blank"><img src="img/sw.png"></a> |
 | Building TreeNode's tree from array | 987. Vertical Order Traversal of a Binary Tree <a href="https://github.com/chemandante/leetcode/blob/master/09/87/m987.py" target="_blank"><img src="img/py.png"></a> |
