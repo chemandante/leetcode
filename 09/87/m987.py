@@ -1,7 +1,6 @@
 # Solved:
 # (H) Vertical Order Traversal of a Binary Tree
 # https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
-# Helper: Building TreeNode's tree from array
 
 from typing import List, Optional
 
