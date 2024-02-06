@@ -104,9 +104,11 @@ Here is the list of solved problems. Language images are clickable and lead to t
 | 1710 | ![E](img/E.png) [Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck/) | | <a href="https://github.com/chemandante/leetcode/blob/master/17/10/m1710.cpp" target="_blank"><img src="img/cpp.png"></a> |
 | 1855 | ![M](img/M.png) [Maximum Distance Between a Pair of Values](https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/) | | <a href="https://github.com/chemandante/leetcode/blob/master/18/55/m1855.py" target="_blank"><img src="img/py.png"></a> |
 | 2091 | ![M](img/M.png) [Removing Minimum and Maximum From Array](https://leetcode.com/problems/removing-minimum-and-maximum-from-array/) | | <a href="https://github.com/chemandante/leetcode/blob/master/20/91/m2091.py" target="_blank"><img src="img/py.png"></a> |
-| 2183 | ![H](img/H.png) [Count Array Pairs Divisible by K](https://leetcode.com/problems/count-array-pairs-divisible-by-k/) | | <a href="https://github.com/chemandante/leetcode/blob/master/2183/m2183.py" target="_blank"><img src="img/py.png"></a> |
-| 2197 | ![H](img/H.png) [Replace Non-Coprime Numbers in Array](https://leetcode.com/problems/replace-non-coprime-numbers-in-array/) | | <a href="https://github.com/chemandante/leetcode/blob/master/2197/m2197.py" target="_blank"><img src="img/py.png"></a> |
+| 2147 | ![H](img/H.png) [Number of Ways to Divide a Long Corridor](https://leetcode.com/problems/number-of-ways-to-divide-a-long-corridor/) | | <a href="https://github.com/chemandante/leetcode/blob/master/21/47/m2147.py" target="_blank"><img src="img/py.png"></a> |
+| 2183 | ![H](img/H.png) [Count Array Pairs Divisible by K](https://leetcode.com/problems/count-array-pairs-divisible-by-k/) | | <a href="https://github.com/chemandante/leetcode/blob/master/21/83/m2183.py" target="_blank"><img src="img/py.png"></a> |
+| 2197 | ![H](img/H.png) [Replace Non-Coprime Numbers in Array](https://leetcode.com/problems/replace-non-coprime-numbers-in-array/) | | <a href="https://github.com/chemandante/leetcode/blob/master/21/97/m2197.py" target="_blank"><img src="img/py.png"></a> |
 | 2280 | ![M](img/M.png) [Minimum Lines to Represent a Line Chart](https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart/) | | <a href="https://github.com/chemandante/leetcode/blob/master/22/80/m2280.cpp" target="_blank"><img src="img/cpp.png"></a> |
+| 2478 | ![H](img/H.png) [Number of Beautiful Partitions](https://leetcode.com/problems/number-of-beautiful-partitions) | | <a href="https://github.com/chemandante/leetcode/blob/master/24/78/m2478.cpp" target="_blank"><img src="img/cpp.png"></a> |
 
 ### Basic algorithm implementations
 
