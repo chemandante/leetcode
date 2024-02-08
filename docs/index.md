@@ -46,6 +46,7 @@ Here is the list of solved problems. Language images are clickable and lead to t
 | 263 | ![E](img/E.png) [Ugly Number](https://leetcode.com/problems/ugly-number/) | | <a href="https://github.com/chemandante/leetcode/blob/master/02/63/m263.cpp" target="_blank"><img src="img/cpp.png"></a> |
 | 264 | ![M](img/M.png) [Ugly Number II](https://leetcode.com/problems/ugly-number-ii/) | | <a href="https://github.com/chemandante/leetcode/blob/master/02/64/m264.py" target="_blank"><img src="img/py.png"></a> |
 | 278 | ![E](img/E.png) [First Bad Version](https://leetcode.com/problems/first-bad-version/) | | <a href="https://github.com/chemandante/leetcode/blob/master/02/78/m278.py" target="_blank"><img src="img/py.png"></a> |
+| 279 | ![M](img/M.png) [Perfect Squares](https://leetcode.com/problems/perfect-squares) | | <a href="https://github.com/chemandante/leetcode/blob/master/02/79/m279.py" target="_blank"><img src="img/py.png"></a> |
 | 304 | ![M](img/M.png) [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/) | | <a href="https://github.com/chemandante/leetcode/blob/master/03/04/m304.cpp" target="_blank"><img src="img/cpp.png"></a> |
 | 307 | ![M](img/M.png) [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/) | | <a href="https://github.com/chemandante/leetcode/blob/master/03/07/m307.cpp" target="_blank"><img src="img/cpp.png"></a> |
 | 315 | ![H](img/H.png) [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) | | <a href="https://github.com/chemandante/leetcode/blob/master/03/15/m315.swift" target="_blank"><img src="img/sw.png"></a> <a href="https://github.com/chemandante/leetcode/blob/master/03/15/m315.c" target="_blank"><img src="img/c.png"></a> |
@@ -141,6 +142,12 @@ Here is the list of solved problems. Language images are clickable and lead to t
 |:---:|-----------------------------|:----:|-------|
 | 25 | <a href="https://github.com/chemandante/leetcode/tree/master/00/25" target="_blank">Reverse Nodes in k-Group</a> | ![](img/py.png) |  |
 | 92 | <a href="https://github.com/chemandante/leetcode/tree/master/00/92" target="_blank">Reverse Linked List II</a> | ![](img/py.png) |  |
+
+#### Factorization
+
+| No. | Solutions where implemented | Lang | Notes |
+|:---:|-----------------------------|:----:|-------|
+| 279 | <a href="https://github.com/chemandante/leetcode/tree/master/02/79" target="_blank">Perfect Squares</a> | ![](img/py.png) | Simple factorization |
 
 
 ### Other helpers
